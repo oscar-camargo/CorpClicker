@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8581827c5fc42343b751516264ffc10, type: 3}
+  m_Name: StapleStorm_3000
+  m_EditorClassIdentifier: 
+  icons:
+  - {fileID: 21300000, guid: 59466f66a80c7664c81ad3afe2c482e8, type: 3}
+  - {fileID: 21300000, guid: 59466f66a80c7664c81ad3afe2c482e8, type: 3}
+  - {fileID: 21300000, guid: 59466f66a80c7664c81ad3afe2c482e8, type: 3}
+  - {fileID: 21300000, guid: 59466f66a80c7664c81ad3afe2c482e8, type: 3}
+  title: Staple Storm 3000
+  Description: A rain of staples will surely make everyone notice you.
+  maxLevel: 3
+  effectType: 2
+  costPerLevel:
+  - 25
+  - 50
+  - 100
+  baseCost: 0
+  costGrowthFactor: 1.15
+  effectPerLevel: []
+  effectDescription: Each click adds +1 charge. Press Ctrl + R when charged to activate
+    KPI boost!
+  flavorTexts:
+  - Now getting everyone's attention by throwing staples at them (Karen filed a complaint
+    to HR)
+  - Technically, still a stapler. Legally, a weapon
+  - Your performance review will now include collateral damage
+  activationKey: 114
+  requiresShift: 0
+  requiresCtrl: 1
+  pushLuckConfig: {fileID: 11400000, guid: 3f65243042923de4098624f48f18c853, type: 2}

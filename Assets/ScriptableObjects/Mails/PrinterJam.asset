@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f074757e753a2574f9e45764e7609b8c, type: 3}
+  m_Name: PrinterJam
+  m_EditorClassIdentifier: 
+  subject: Re:Re:Re:Re:Re I'm crying
+  content: 'Dear sir,
+
+
+    It''s with my utmost regret to inform you that I just
+    jammed the printer. Again. Please help, if IT finds out I''ll have a sacrifice
+    meeting with Khz''ao.
+
+
+    Regards,
+
+    Timmy
+
+    Intern'
+  responses:
+  - responseText: Sure, I'll drop by
+    moraleModifier: 0
+    reputationModifier: 10
+  - responseText: Have you tried turning it off and on? lol
+    moraleModifier: 30
+    reputationModifier: -20
+  - responseText: Of course, you're my most appreciated intern
+    moraleModifier: 20
+    reputationModifier: 0
+  - responseText: The mythocondria is the powerhouse of the cell
+    moraleModifier: 0
+    reputationModifier: 0

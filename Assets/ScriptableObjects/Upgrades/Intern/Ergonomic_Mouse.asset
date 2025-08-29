@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8581827c5fc42343b751516264ffc10, type: 3}
+  m_Name: Ergonomic_Mouse
+  m_EditorClassIdentifier: 
+  icons:
+  - {fileID: 21300000, guid: 621281a2cdd55dd40a2c2c396d15e503, type: 3}
+  - {fileID: 21300000, guid: 621281a2cdd55dd40a2c2c396d15e503, type: 3}
+  - {fileID: 21300000, guid: 621281a2cdd55dd40a2c2c396d15e503, type: 3}
+  - {fileID: 21300000, guid: 621281a2cdd55dd40a2c2c396d15e503, type: 3}
+  title: Ergonomic Mouse
+  Description: $100 cramp generator
+  maxLevel: 3
+  effectType: 0
+  costPerLevel:
+  - 50
+  - 100
+  - 200
+  effectPerLevel:
+  - 0
+  - 1
+  - 2
+  - 3
+  effectDescription: +1 KPI per click
+  flavorTexts:
+  - You didn't think a $50 cramp inducer would transform your productivity, did you?
+  - Now with 2 extra buttons you won't use!
+  - Why is it glowing? Why does it whisper?
+  activationKey: 0
+  requiresShift: 0
+  requiresCtrl: 0
+  boostDuration: 15

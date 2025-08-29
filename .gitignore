@@ -1,1 +1,2 @@
 -e "node_modules/\n.DS_Store\n.env\nvenv/\n*.log\n" 
+Library/

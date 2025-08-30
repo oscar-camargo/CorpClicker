@@ -485,11 +485,11 @@ Transform:
   m_GameObject: {fileID: 57218708}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 334.28162, y: -21.475708, z: 0}
+  m_LocalPosition: {x: 1294.2816, y: 518.5243, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1368406331}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &57218710
 MonoBehaviour:
@@ -508,8 +508,8 @@ MonoBehaviour:
   scrollRect: {fileID: 1283867250}
   spacerPrefab: {fileID: 4313369235950308145, guid: f2bfefc239603754baa8630875cc0dcd, type: 3}
   ghostMessagePlaceholder: {fileID: 1014140127}
-  messageInterval: 5
-  spawnProbability: 0.523
+  messageInterval: 10
+  spawnProbability: 0.8
   maxMessages: 10
 --- !u!1 &102626777
 GameObject:
@@ -3640,8 +3640,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0794715fe0920a7478962a10c1c38cde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  checkInterval: 10
-  spawnChance: 0.4
+  checkInterval: 60
+  spawnChance: 1
   maxMails: 4
   mailPool:
   - {fileID: 11400000, guid: d8f2a3428a1850a4988cd19816f5ce10, type: 2}
@@ -3652,9 +3652,9 @@ MonoBehaviour:
   - {fileID: 1745937137}
   mailPrefab: {fileID: 7635606469815574655, guid: ba0960ceefb67d044b7ce93ff141d208, type: 3}
   mailDisplayArea: {fileID: 1906850562}
-  noMailTextGroup: {fileID: 1217337267}
-  noMailSubject: {fileID: 265494232}
-  noMailContent: {fileID: 965755402}
+  noMailText: {fileID: 965755402}
+  noMailObject: {fileID: 1217337267}
+  mailExpireSeconds: 60
 --- !u!4 &749750299
 Transform:
   m_ObjectHideFlags: 0
@@ -5177,7 +5177,6 @@ RectTransform:
   m_Children:
   - {fileID: 159754065}
   - {fileID: 102626778}
-  - {fileID: 57218709}
   - {fileID: 1283867249}
   - {fileID: 2076848198}
   - {fileID: 1757315775}
@@ -5634,7 +5633,7 @@ MonoBehaviour:
   barTween: 0.25
   morale: 50
   reputation: 10
-  moraleMultAt0: 0.8
+  moraleMultAt0: 0.5
   moraleMultAt100: 1.5
   moraleCurve:
     serializedVersion: 2
@@ -5649,8 +5648,8 @@ MonoBehaviour:
       inWeight: 0
       outWeight: 0
     - serializedVersion: 3
-      time: 0.50500464
-      value: 0.6597399
+      time: 0.50015414
+      value: 0.50074846
       inSlope: 1.5716444
       outSlope: 1.5716444
       tangentMode: 0
@@ -5670,9 +5669,9 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   levelThresholds: 1e0000003c0000005a000000
-  autoCapMin: 1
-  autoCapMax: 500
-  expK: 4
+  autoCapMin: 15
+  autoCapMax: 1000
+  expK: 5
 --- !u!4 &1488367986
 Transform:
   m_ObjectHideFlags: 0
@@ -7079,53 +7078,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1837975760}
   m_CullTransparentMesh: 1
---- !u!1 &1840292955
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1840292957}
-  - component: {fileID: 1840292956}
-  m_Layer: 0
-  m_Name: MailSpawner
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1840292956
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1840292955}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2bfec89639e845a45ba5c7566b0c27fc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mailManager: {fileID: 749750298}
-  checkInterval: 10
-  spawnChance: 0.89
---- !u!4 &1840292957
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1840292955}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 846.76996, y: 597.3583, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1848179830
 GameObject:
   m_ObjectHideFlags: 0
@@ -8636,5 +8588,5 @@ SceneRoots:
   - {fileID: 453615092}
   - {fileID: 384246192}
   - {fileID: 749750299}
-  - {fileID: 1840292957}
   - {fileID: 1488367986}
+  - {fileID: 57218709}

@@ -22,14 +22,14 @@ MonoBehaviour:
   maxLevel: 3
   effectType: 2
   costPerLevel:
-  - 25
-  - 50
-  - 100
+  - 5000
+  - 20000
+  - 100000
   baseCost: 0
   costGrowthFactor: 1.15
   effectPerLevel: []
-  effectDescription: Each click adds +1 charge. Press Ctrl + R when charged to activate
-    KPI boost!
+  effectDescription: Press Ctrl + R when charged to activate KPI boost! (With unpredictable
+    results)
   flavorTexts:
   - Now getting everyone's attention by throwing staples at them (Karen filed a complaint
     to HR)

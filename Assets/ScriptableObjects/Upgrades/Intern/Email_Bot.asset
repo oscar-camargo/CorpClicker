@@ -19,11 +19,11 @@ MonoBehaviour:
   maxLevel: 1
   effectType: 1
   costPerLevel: []
-  baseCost: 50
+  baseCost: 130000
   costGrowthFactor: 1.15
   effectPerLevel:
-  - 1
-  effectDescription: +1 KPI per second
+  - 260
+  effectDescription: +260 KPI per second
   flavorTexts:
   - Also capable of debating with people on internet forums!
   activationKey: 0

@@ -91,6 +91,7 @@ public class MessageLogManager : MonoBehaviour
     private void ScrollToBottom()
     {
         Canvas.ForceUpdateCanvases();
+        LayoutRebuilder.ForceRebuildLayoutImmediate(contentParent);
         scrollRect.verticalNormalizedPosition = 0f;
     }
 

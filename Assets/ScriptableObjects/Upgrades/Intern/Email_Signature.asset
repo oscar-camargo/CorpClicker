@@ -22,15 +22,17 @@ MonoBehaviour:
   maxLevel: 3
   effectType: 0
   costPerLevel:
-  - 50
-  - 100
   - 200
+  - 500
+  - 1000
+  baseCost: 0
+  costGrowthFactor: 1.15
   effectPerLevel:
   - 0
-  - 1
-  - 2
-  - 3
-  effectDescription: +1 KPI per click
+  - 5
+  - 10
+  - 15
+  effectDescription: +5 KPI per click
   flavorTexts:
   - Best Synergistic Regards,
   - Adds a motivational quote (misattributed to Einstein)
@@ -38,4 +40,4 @@ MonoBehaviour:
   activationKey: 0
   requiresShift: 0
   requiresCtrl: 0
-  boostDuration: 15
+  pushLuckConfig: {fileID: 0}

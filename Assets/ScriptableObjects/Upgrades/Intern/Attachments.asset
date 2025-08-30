@@ -19,11 +19,11 @@ MonoBehaviour:
   maxLevel: 1
   effectType: 1
   costPerLevel: []
-  baseCost: 50
+  baseCost: 12000
   costGrowthFactor: 1.15
   effectPerLevel:
-  - 1
-  effectDescription: +1 KPI per second
+  - 50
+  effectDescription: +50 KPI per second
   flavorTexts:
   - AI-Generated slide decks about leadership and synergies that no one really understands
     but shares on LinkedIn

@@ -12,21 +12,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b860da5a7232c346bfd9e56cd7500a2, type: 3}
   m_Name: PushLuckConfig
   m_EditorClassIdentifier: Assembly-CSharp::PushLuckConfig
-  tier1Min: 10
-  tier2Min: 20
-  tier3Min: 50
-  maxClicks: 100
-  tier1FlatPerClick: 8
-  tier2FlatPerClick: 12
-  tier3FlatPerClick: 16
-  tier1AutoMult: 1.05
-  tier2AutoMult: 1.1
-  tier3AutoMult: 1.2
+  tier1Min: 100
+  tier2Min: 150
+  tier3Min: 200
+  maxClicks: 250
+  tier1FlatPerClick: 10
+  tier2FlatPerClick: 50
+  tier3FlatPerClick: 100
+  tier1AutoMult: 1.1
+  tier2AutoMult: 1.25
+  tier3AutoMult: 1.5
   baseDurationByLevel:
   - 10
   - 15
   - 20
-  moraleDurationMultRange: {x: 0.9, y: 1.1}
+  moraleDurationMultRange: {x: 0.75, y: 1.5}
   tier2FailCurve:
     serializedVersion: 2
     m_Curve:
@@ -75,8 +75,8 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  blockClicksSeconds: 15
-  blockAllSeconds: 15
+  blockClicksSeconds: 30
+  blockAllSeconds: 40
   lockMinutesByLevel:
   - 0
   - 0

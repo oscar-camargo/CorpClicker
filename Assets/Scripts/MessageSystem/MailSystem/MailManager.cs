@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -15,7 +16,8 @@ public class MailManager : MonoBehaviour
     public List<MailSlot> mailSlots;
     public GameObject mailPrefab;
     public Transform mailDisplayArea;
-    public Text noMailText; // optional: hook if you use it
+    public TextMeshProUGUI noMailText; // optional: hook if you use it
+    public GameObject noMailObject;
 
     [Header("Expiry")]
     [SerializeField] private float mailExpireSeconds = 60f;
@@ -64,14 +66,15 @@ public class MailManager : MonoBehaviour
     public void DisplayMail(MailData mailData, MailSlot sourceSlot)
     {
         currentOpenSlot = sourceSlot;
-
+        noMailObject.SetActive(false);
         // clear previous
         foreach (Transform child in mailDisplayArea) Destroy(child.gameObject);
 
         // spawn and populate
         var mailGO = Instantiate(mailPrefab, mailDisplayArea);
-        mailGO.GetComponent<MailEntryUI>().Setup(mailData); // your existing UI setup
+        mailGO.GetComponent<MailEntryUI>().Setup(mailData,this); // your existing UI setup
         // tooltip/buttons already wired in MailEntryUI
+
     }
 
     public void MarkMailAsHandled(MailData mail)
@@ -97,6 +100,7 @@ public class MailManager : MonoBehaviour
             foreach (Transform child in mailDisplayArea) Destroy(child.gameObject);
             currentOpenSlot = null;
             UpdateNoMailText();
+            noMailObject.SetActive(true);
         }
     }
 
@@ -124,17 +128,32 @@ public class MailManager : MonoBehaviour
 
             expiryBySlot.Remove(slot);
             UpdateNoMailText();
+            noMailObject.SetActive(true);
         }
     }
 
     private void UpdateNoMailText()
     {
         if (!noMailText) return;
-        // show when there is NO active slot visible
+
+        // Hide banner if a mail is open
+        if (currentOpenSlot != null)
+        {
+            noMailText.gameObject.SetActive(false);
+            return;
+        }
+
+        // Show "Check your inbox!" when there are queued mails; otherwise default text
         bool anyActive = false;
-        foreach (var s in mailSlots) { if (s.gameObject.activeSelf) { anyActive = true; break; } }
-        noMailText.gameObject.SetActive(!anyActive);
-        if (!anyActive) noMailText.text = "You have no mails";
+        foreach (var s in mailSlots)
+        {
+            if (s.gameObject.activeSelf) { anyActive = true; break; }
+        }
+
+        noMailText.gameObject.SetActive(true);
+        noMailText.text = anyActive
+            ? "Check your inbox!"
+            : "You have no mails... for now. Enjoy it while it lasts";
     }
 
     public bool MailOpen() => currentOpenSlot != null;

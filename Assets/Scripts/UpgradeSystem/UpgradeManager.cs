@@ -5,6 +5,8 @@ using Clicker.Upgrades;
 using Clicker.UI.UpgradeUI;
 using Clicker.Core;
 using Clicker.PlayerStats;
+using System.Linq;
+
 
 namespace Clicker.Upgrades
 {
@@ -18,8 +20,11 @@ namespace Clicker.Upgrades
         [SerializeField] private float autoGenerationInterval = 1f;
 
         private Dictionary<UpgradeData, int> upgradeLevels = new();
-        private Dictionary<UpgradeData, UpgradeSlotDisplay> upgradeDisplayMap = new();
         private Dictionary<UpgradeData, int> purchaseCounts = new();
+        private Dictionary<UpgradeData, UpgradeSlotDisplay> upgradeDisplayMap = new();
+        private HashSet<UpgradeData> pendingToInstantiate = new();
+
+        private bool repSubscribed = false;
 
         // Push-your-luck state
         private int pushClicks = 0;          // 0..config.maxClicks
@@ -34,20 +39,22 @@ namespace Clicker.Upgrades
 
         private void Start()
         {
-            foreach (var upgrade in allUpgrades)
-            {
-                upgradeLevels[upgrade] = 0;
+            foreach (var u in allUpgrades) { upgradeLevels[u] = 0; purchaseCounts[u] = 0; }
 
-                var ui = Instantiate(upgradeUIPrefab, upgradeUIParent).GetComponent<UpgradeSlotDisplay>();
-                ui.Setup(upgrade, 0);
-                bool isPush = upgrade.effectType == UpgradeEffectType.PushYourLuck;
-                ui.ShowChargeBar(isPush);
+            var cheapest = GetCheapestUpgrade();
+            InstantiateSlot(cheapest);
 
-                upgradeDisplayMap[upgrade] = ui;
-            }
+            foreach (var u in allUpgrades)
+                if (u != cheapest) pendingToInstantiate.Add(u);
+
+            CheckPendingUpgrades();
 
             StartCoroutine(AutoGenerateKPICoroutine());
+
+            EnsureRepSubscription(); 
+            EnforceReputationCaps(0);
         }
+
 
         private void Update()
         {
@@ -73,6 +80,7 @@ namespace Clicker.Upgrades
                 float fill = Mathf.Clamp01((float)pushClicks / pu.pushLuckConfig.maxClicks);
                 ui.UpdateChargeBar(fill);
             }
+            if (!repSubscribed) EnsureRepSubscription();
         }
 
         public void OnPlayerClick()
@@ -105,7 +113,7 @@ namespace Clicker.Upgrades
                     int cap = stats.GetAutomationCap();
                     if (purchases >= cap)
                     {
-                        Debug.Log($"Blocked: automation cap {cap} at reputation {stats.reputation}.");
+                        MessageLogManager.Instance?.PostSpecial($"Automation cap {cap} at reputation {stats.reputation}.");
                         return;
                     }
                 }
@@ -115,7 +123,7 @@ namespace Clicker.Upgrades
                         !stats.CanIncreaseToNextLevel(currentLevel))
                     {
                         int needed = stats.RequiredReputationForLevel(currentLevel + 1);
-                        Debug.Log($"Blocked: need reputation >= {needed} for level {currentLevel + 1}.");
+                        MessageLogManager.Instance?.PostSpecial($"Blocked: need reputation > {needed}");
                         return;
                     }
                 }
@@ -312,23 +320,45 @@ namespace Clicker.Upgrades
 
         private void OnEnable()
         {
-            GameState.Instance.OnKPIChanged += RefreshAllButtons;
+            if (GameState.Instance != null)
+                GameState.Instance.OnKPIChanged += RefreshAllButtons;
+
+            var stats = PlayerStatsManager.Instance;
+            if (stats != null)
+                stats.OnReputationChanged += EnforceReputationCaps;
+            EnsureRepSubscription();
         }
 
         private void OnDisable()
         {
             if (GameState.Instance != null)
                 GameState.Instance.OnKPIChanged -= RefreshAllButtons;
+
+            var stats = PlayerStatsManager.Instance;
+            if (stats != null)
+                stats.OnReputationChanged -= EnforceReputationCaps;
+            repSubscribed = false;
         }
 
         private void RefreshAllButtons(double currentKPI)
         {
-            foreach (var upgrade in allUpgrades)
+            CheckPendingUpgrades();
+
+            foreach (var kv in upgradeDisplayMap)
             {
-                if (!upgradeLevels.ContainsKey(upgrade)) continue;
-                upgradeDisplayMap[upgrade].Refresh(upgradeLevels[upgrade]);
+                var u = kv.Key;
+                var ui = kv.Value;
+
+                ui.Refresh(GetUpgradeLevel(u));
+
+                double costNow = (u.effectType == UpgradeEffectType.AutoGenerate)
+                    ? u.GetCostAtLevel(0, GetPurchaseCount(u))
+                    : u.GetCostAtLevel(GetUpgradeLevel(u));
+
+                ui.SetAffordable(currentKPI >= costNow);
             }
         }
+
 
         public int GetPurchaseCount(UpgradeData upgrade)
         {
@@ -354,6 +384,115 @@ namespace Clicker.Upgrades
             var pu = GetPushUpgrade();
             if (pu != null && upgradeDisplayMap.TryGetValue(pu, out var ui))
                 ui.UpdateChargeBar(0f);
+        }
+
+        private double InitialCost(UpgradeData u)
+        {
+            return (u.effectType == UpgradeEffectType.AutoGenerate)
+                ? u.GetCostAtLevel(0, 0)
+                : u.GetCostAtLevel(0); 
+        }
+
+        private UpgradeData GetCheapestUpgrade()
+        {
+            UpgradeData best = null;
+            double bestCost = double.MaxValue;
+            foreach (var u in allUpgrades)
+            {
+                double c = InitialCost(u);
+                if (c < bestCost) { bestCost = c; best = u; }
+            }
+            return best;
+        }
+
+        private void InstantiateSlot(UpgradeData u)
+        {
+            var ui = Instantiate(upgradeUIPrefab, upgradeUIParent);
+            ui.Setup(u, upgradeLevels[u]);
+            ui.ShowChargeBar(u.effectType == UpgradeEffectType.PushYourLuck);
+            upgradeDisplayMap[u] = ui;
+
+            double costNow = (u.effectType == UpgradeEffectType.AutoGenerate)
+                ? u.GetCostAtLevel(0, GetPurchaseCount(u))
+                : u.GetCostAtLevel(GetUpgradeLevel(u));
+            ui.SetAffordable(GameState.Instance && GameState.Instance.GetKPI() >= costNow);
+        }
+
+        private void CheckPendingUpgrades()
+        {
+            if (GameState.Instance == null || pendingToInstantiate.Count == 0) return;
+            double at = GameState.Instance.GetAllTimeKPI();
+
+            var toSpawn = new List<UpgradeData>();
+            foreach (var u in pendingToInstantiate)
+                if (at >= 0.5 * InitialCost(u))
+                    toSpawn.Add(u);
+
+            foreach (var u in toSpawn)
+            {
+                pendingToInstantiate.Remove(u);
+                InstantiateSlot(u);
+            }
+        }
+
+        private void EnforceReputationCaps(int _)
+        {
+            var stats = PlayerStatsManager.Instance;
+            if (stats == null) return;
+
+            int maxAllowedLevel = stats.GetMaxAllowedUpgradeLevel();
+
+            int autoCap = stats.GetAutomationCap();
+            bool anyChange = false;
+
+            foreach (var u in allUpgrades)
+            {
+                if (u.effectType == UpgradeEffectType.AutoGenerate)
+                {
+                    int current = purchaseCounts.TryGetValue(u, out var cnt) ? cnt : 0;
+                    int clamped = Mathf.Min(current, autoCap);
+                    if (clamped != current)
+                    {
+                        purchaseCounts[u] = clamped;
+                        anyChange = true;
+                    }
+                }
+                else // FlatPerClick / PushYourLuck (level-based)
+                {
+                    int lvl = upgradeLevels.TryGetValue(u, out var l) ? l : 0;
+                    int allowed = Mathf.Min(maxAllowedLevel, u.maxLevel);
+                    if (lvl > allowed)
+                    {
+                        upgradeLevels[u] = allowed;
+                        anyChange = true;
+                    }
+                }
+
+                // Per-slot UI refresh (force both text/icon and bar)
+                if (upgradeDisplayMap.TryGetValue(u, out var ui))
+                {
+                    int shownLevel = upgradeLevels.TryGetValue(u, out var lv) ? lv : 0;
+                    ui.Refresh(shownLevel);
+                    ui.UpdateLevelBar(shownLevel); // explicitly redraw the bar
+                }
+            }
+
+            // If anything changed, also refresh all buttons (ensures costs/MAX labels, etc.)
+            if (anyChange)
+                RefreshAllButtons(GameState.Instance != null ? GameState.Instance.GetKPI() : 0);
+        }
+
+        private void EnsureRepSubscription()
+        {
+            var stats = PlayerStatsManager.Instance;
+            if (stats != null && !repSubscribed)
+            {
+                stats.OnReputationChanged += EnforceReputationCaps;
+                repSubscribed = true;
+
+                // Immediately clamp to current reputation so UI/effects match
+                EnforceReputationCaps(stats.reputation);
+            }
         }
     }
 }

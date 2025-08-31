@@ -38,4 +38,4 @@ MonoBehaviour:
     reputationModifier: 0
   - responseText: The mythocondria is the powerhouse of the cell
     moraleModifier: 0
-    reputationModifier: 0
+    reputationModifier: -20

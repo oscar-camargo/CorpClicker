@@ -6,6 +6,9 @@ using System.Collections.Generic;
 
 public class MessageLogManager : MonoBehaviour
 {
+    public static MessageLogManager Instance { get; private set; }
+    private void Awake() => Instance = this;
+
     [Header("UI References")]
     [SerializeField] private RectTransform contentParent;
     [SerializeField] private GameObject messageEntryPrefab;
@@ -18,12 +21,29 @@ public class MessageLogManager : MonoBehaviour
     [SerializeField, Range(0f, 1f)] private float spawnProbability = 0.3f;
     [SerializeField] private int maxMessages = 50;
 
+    [Header("Special message color")]
+    [SerializeField] private Color specialColor = new Color32(128, 0, 0, 255); // maroon
+
     private readonly Queue<GameObject> activeMessages = new Queue<GameObject>();
     private readonly Queue<GameObject> activeSpacers = new Queue<GameObject>();
 
     private void Start()
     {
         StartCoroutine(RandomMessageCoroutine());
+    }
+
+    public void Post(string text) //CURRENTLY NOT USED, BUT CAN BE USED LATER
+    {
+        var go = Instantiate(messageEntryPrefab, contentParent);
+        go.GetComponent<MessageEntryUI>()?.SetText(text);
+        EnqueueAndScroll(go);
+    }
+
+    public void PostSpecial(string text)
+    {
+        var go = Instantiate(messageEntryPrefab, contentParent);
+        go.GetComponent<MessageEntryUI>()?.SetText(text, specialColor, true);
+        EnqueueAndScroll(go);
     }
 
     private IEnumerator RandomMessageCoroutine()
@@ -86,6 +106,18 @@ public class MessageLogManager : MonoBehaviour
         ScrollToBottom();
 
         return newEntry;
+    }
+
+    private void EnqueueAndScroll(GameObject go)
+    {
+        activeMessages.Enqueue(go);
+        if (activeMessages.Count > maxMessages)
+        {
+            Destroy(activeMessages.Dequeue());
+            if (activeSpacers.Count > maxMessages / 2 - 1)
+                Destroy(activeSpacers.Dequeue());
+        }
+        ScrollToBottom();
     }
 
     private void ScrollToBottom()

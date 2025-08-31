@@ -219,6 +219,7 @@ GameObject:
   - component: {fileID: 8338514263226007822}
   - component: {fileID: 3170282356256362451}
   - component: {fileID: 2559226639841825630}
+  - component: {fileID: 4216386321145392481}
   m_Layer: 5
   m_Name: UpgradeSlotDisplay
   m_TagString: Untagged
@@ -327,13 +328,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   icon: {fileID: 9133232064974112650}
+  background: {fileID: 8338514263226007822}
   titleText: {fileID: 9033876536454122252}
   costText: {fileID: 4003353185742752495}
   levelBar: {fileID: 4868759210955404250}
   chargeBarFill: {fileID: 3129955942673225382}
   purchaseCountText: {fileID: 6347862917056531154}
   purchaseCountContainer: {fileID: 3645826769639102099}
-  slotCanvasGroup: {fileID: 0}
+  slotCanvasGroup: {fileID: 4216386321145392481}
+--- !u!225 &4216386321145392481
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2014316554876901924}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &2056243575828958518
 GameObject:
   m_ObjectHideFlags: 0

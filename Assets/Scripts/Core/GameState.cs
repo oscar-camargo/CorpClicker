@@ -12,6 +12,8 @@ namespace Clicker.Core
 
         public double TemporaryKpiMultiplier { get; set; } = 1.0;
 
+        private double allTimeKPI = 0; //Keeps track of KPI produced so far since game started
+
         public event Action<double> OnKPIChanged;
 
         public double TempFlatKpiPerClick { get; set; } = 0.0;
@@ -37,10 +39,13 @@ namespace Clicker.Core
 
             double final = baseAmount * TemporaryKpiMultiplier * moraleMult;
             currentKPI += final;
+            allTimeKPI += final;
             OnKPIChanged?.Invoke(currentKPI);
         }
 
         public double GetKPI() => currentKPI;
+
+        public double GetAllTimeKPI() => allTimeKPI;
 
         public bool HasEnoughKPI(double amount) => currentKPI >= amount;
 
@@ -60,6 +65,7 @@ namespace Clicker.Core
 
             double final = (baseAmount + TempFlatKpiPerClick) * moraleMult * TemporaryKpiMultiplier;
             currentKPI += final;
+            allTimeKPI += final;
             OnKPIChanged?.Invoke(currentKPI);
         }
 
@@ -74,6 +80,7 @@ namespace Clicker.Core
 
             double final = baseAmount * moraleMult * TempAutomationMultiplier;
             currentKPI += final;
+            allTimeKPI += final;
             OnKPIChanged?.Invoke(currentKPI);
         }
 

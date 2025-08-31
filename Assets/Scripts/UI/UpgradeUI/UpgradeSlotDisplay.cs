@@ -2,6 +2,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using Clicker.Upgrades;
+using Clicker.Core;
 using UnityEngine.EventSystems;
 
 namespace Clicker.UI.UpgradeUI
@@ -10,6 +11,7 @@ namespace Clicker.UI.UpgradeUI
     {
         [Header("UI")]
         [SerializeField] private Image icon;
+        [SerializeField] private Image background;
         [SerializeField] private TextMeshProUGUI titleText;
         [SerializeField] private TextMeshProUGUI costText;
         [SerializeField] private Image levelBar;
@@ -61,7 +63,7 @@ namespace Clicker.UI.UpgradeUI
                 ? upgradeData.GetCostAtLevel(0, purchases)
                 : upgradeData.GetCostAtLevel(newLevel);
 
-            costText.text = (!isAuto && newLevel >= upgradeData.maxLevel) ? "MAX" : $"{cost} KPI";
+            UpdateCostUI(newLevel);
 
             int iconIdxLimit = (upgradeData.icons?.Length ?? 1) - 1;
             int iconIndex = isAuto ? purchases : Mathf.Clamp(newLevel, 0, iconIdxLimit);
@@ -139,6 +141,37 @@ namespace Clicker.UI.UpgradeUI
             {
                 purchaseCountText.text = "";
             }
+        }
+
+        // --- Helper functions
+
+        public void SetAffordable(bool canBuy)
+        {
+            if (slotCanvasGroup && !cooldownOverlayActive)
+                slotCanvasGroup.alpha = canBuy ? 1f : 0.5f;
+        }
+
+        private void UpdateCostUI(int level)
+        {
+            if (!costText || upgradeData == null) return;
+
+            bool isAuto = upgradeData.effectType == UpgradeEffectType.AutoGenerate;
+            int purchases = UpgradeManager.Instance.GetPurchaseCount(upgradeData);
+
+            double cost = isAuto
+                ? upgradeData.GetCostAtLevel(0, purchases)
+                : upgradeData.GetCostAtLevel(level);
+
+            costText.richText = false;
+            costText.enableAutoSizing = false;
+            costText.overflowMode = TextOverflowModes.Overflow;
+            var c = costText.color; c.a = 1f; costText.color = c;
+            costText.enabled = true;
+            costText.gameObject.SetActive(true);
+
+            costText.text = (!isAuto && level >= upgradeData.maxLevel)
+                ? "MAX"
+                : $"{cost} KPI";
         }
 
         // --- Pointer events ---

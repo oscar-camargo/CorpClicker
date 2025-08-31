@@ -511,6 +511,7 @@ MonoBehaviour:
   messageInterval: 10
   spawnProbability: 0.8
   maxMessages: 10
+  specialColor: {r: 0.5019608, g: 0, b: 0, a: 1}
 --- !u!1 &102626777
 GameObject:
   m_ObjectHideFlags: 0
@@ -3640,7 +3641,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0794715fe0920a7478962a10c1c38cde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  checkInterval: 60
+  checkInterval: 10
   spawnChance: 1
   maxMails: 4
   mailPool:

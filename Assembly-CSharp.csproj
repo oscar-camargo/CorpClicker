@@ -66,14 +66,15 @@
     <Compile Include="Assets\Scripts\MessageSystem\MailSystem\MailSpawner.cs" />
     <Compile Include="Assets\Scripts\UI\MailUI\ResponseTooltip.cs" />
     <Compile Include="Assets\Scripts\Core\PlayerStatsManager.cs" />
+    <Compile Include="Assets\Scripts\Sticky\StickyButtonLogic.cs" />
     <Compile Include="Assets\Scripts\UI\UpgradeUI\UpgradeTooltipDisplay.cs" />
     <Compile Include="Assets\Scripts\Core\GameState.cs" />
-    <Compile Include="Assets\Scripts\Sticky\StickyAlmanac.cs" />
     <Compile Include="Assets\Scripts\UpgradeSystem\UpgradeManager.cs" />
     <Compile Include="Assets\Scripts\MessageSystem\MailSystem\MailSlot.cs" />
     <Compile Include="Assets\Scripts\UpgradeSystem\UpgradeType.cs" />
     <Compile Include="Assets\Scripts\Animations\SendButtonAnimator.cs" />
     <Compile Include="Assets\Scripts\UI\UpgradeUI\UpgradeSlotDisplay.cs" />
+    <Compile Include="Assets\Scripts\Sticky\StickyAlmanacManager.cs" />
     <Compile Include="Assets\Scripts\Core\ClickManager.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
     <Compile Include="Assets\Scripts\MessageSystem\MailSystem\MailResponseHover.cs" />

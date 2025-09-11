@@ -1234,6 +1234,7 @@ GameObject:
   - component: {fileID: 267992287}
   - component: {fileID: 267992286}
   - component: {fileID: 267992285}
+  - component: {fileID: 267992288}
   m_Layer: 5
   m_Name: emailBotButton
   m_TagString: Untagged
@@ -1343,6 +1344,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 267992283}
   m_CullTransparentMesh: 1
+--- !u!114 &267992288
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 267992283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f2b562ea263a0b47886d541a55c101d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::StickyButtonLogic
 --- !u!1 &320694295
 GameObject:
   m_ObjectHideFlags: 0
@@ -1355,6 +1368,7 @@ GameObject:
   - component: {fileID: 320694299}
   - component: {fileID: 320694298}
   - component: {fileID: 320694297}
+  - component: {fileID: 320694300}
   m_Layer: 5
   m_Name: reputationButton
   m_TagString: Untagged
@@ -1464,6 +1478,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 320694295}
   m_CullTransparentMesh: 1
+--- !u!114 &320694300
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 320694295}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f2b562ea263a0b47886d541a55c101d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::StickyButtonLogic
 --- !u!1 &325299490
 GameObject:
   m_ObjectHideFlags: 0
@@ -1612,6 +1638,7 @@ GameObject:
   - component: {fileID: 341632958}
   - component: {fileID: 341632957}
   - component: {fileID: 341632956}
+  - component: {fileID: 341632959}
   m_Layer: 5
   m_Name: moraleButton
   m_TagString: Untagged
@@ -1721,6 +1748,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 341632954}
   m_CullTransparentMesh: 1
+--- !u!114 &341632959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 341632954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f2b562ea263a0b47886d541a55c101d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::StickyButtonLogic
 --- !u!1 &359890712
 GameObject:
   m_ObjectHideFlags: 0
@@ -2164,6 +2203,7 @@ GameObject:
   - component: {fileID: 500478618}
   - component: {fileID: 500478617}
   - component: {fileID: 500478616}
+  - component: {fileID: 500478619}
   m_Layer: 5
   m_Name: paddingButton
   m_TagString: Untagged
@@ -2273,6 +2313,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 500478614}
   m_CullTransparentMesh: 1
+--- !u!114 &500478619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 500478614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f2b562ea263a0b47886d541a55c101d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::StickyButtonLogic
 --- !u!1 &514404079
 GameObject:
   m_ObjectHideFlags: 0
@@ -2285,6 +2337,7 @@ GameObject:
   - component: {fileID: 514404083}
   - component: {fileID: 514404082}
   - component: {fileID: 514404081}
+  - component: {fileID: 514404084}
   m_Layer: 5
   m_Name: companyButton
   m_TagString: Untagged
@@ -2394,6 +2447,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 514404079}
   m_CullTransparentMesh: 1
+--- !u!114 &514404084
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 514404079}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f2b562ea263a0b47886d541a55c101d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::StickyButtonLogic
 --- !u!1 &529619699
 GameObject:
   m_ObjectHideFlags: 0
@@ -2406,6 +2471,7 @@ GameObject:
   - component: {fileID: 529619703}
   - component: {fileID: 529619702}
   - component: {fileID: 529619701}
+  - component: {fileID: 529619704}
   m_Layer: 5
   m_Name: mailsbutton
   m_TagString: Untagged
@@ -2515,6 +2581,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 529619699}
   m_CullTransparentMesh: 1
+--- !u!114 &529619704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 529619699}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f2b562ea263a0b47886d541a55c101d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::StickyButtonLogic
 --- !u!1 &534703887
 GameObject:
   m_ObjectHideFlags: 0
@@ -3591,6 +3669,50 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 781928799}
   m_CullTransparentMesh: 1
+--- !u!1 &788708607
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 788708609}
+  - component: {fileID: 788708608}
+  m_Layer: 0
+  m_Name: ButtonLogic
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &788708608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 788708607}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f2b562ea263a0b47886d541a55c101d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::StickyButtonLogic
+--- !u!4 &788708609
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 788708607}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 852.1609, y: 509.0025, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &791172043
 GameObject:
   m_ObjectHideFlags: 0
@@ -3603,6 +3725,7 @@ GameObject:
   - component: {fileID: 791172047}
   - component: {fileID: 791172046}
   - component: {fileID: 791172045}
+  - component: {fileID: 791172048}
   m_Layer: 5
   m_Name: attachmentsbutton
   m_TagString: Untagged
@@ -3712,6 +3835,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 791172043}
   m_CullTransparentMesh: 1
+--- !u!114 &791172048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 791172043}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f2b562ea263a0b47886d541a55c101d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::StickyButtonLogic
 --- !u!1 &827127414
 GameObject:
   m_ObjectHideFlags: 0
@@ -3826,6 +3961,7 @@ GameObject:
   - component: {fileID: 849401522}
   - component: {fileID: 849401521}
   - component: {fileID: 849401520}
+  - component: {fileID: 849401523}
   m_Layer: 5
   m_Name: Clicking
   m_TagString: Untagged
@@ -3935,6 +4071,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 849401518}
   m_CullTransparentMesh: 1
+--- !u!114 &849401523
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 849401518}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f2b562ea263a0b47886d541a55c101d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::StickyButtonLogic
 --- !u!1 &878019491
 GameObject:
   m_ObjectHideFlags: 0
@@ -4414,6 +4562,7 @@ GameObject:
   - component: {fileID: 905628987}
   - component: {fileID: 905628986}
   - component: {fileID: 905628985}
+  - component: {fileID: 905628988}
   m_Layer: 5
   m_Name: whatsKPIbutton
   m_TagString: Untagged
@@ -4523,6 +4672,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 905628983}
   m_CullTransparentMesh: 1
+--- !u!114 &905628988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 905628983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f2b562ea263a0b47886d541a55c101d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::StickyButtonLogic
 --- !u!1 &959198543
 GameObject:
   m_ObjectHideFlags: 0
@@ -5075,6 +5236,7 @@ GameObject:
   - component: {fileID: 996624168}
   - component: {fileID: 996624167}
   - component: {fileID: 996624166}
+  - component: {fileID: 996624169}
   m_Layer: 5
   m_Name: emailSignatureButton
   m_TagString: Untagged
@@ -5184,6 +5346,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 996624164}
   m_CullTransparentMesh: 1
+--- !u!114 &996624169
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 996624164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f2b562ea263a0b47886d541a55c101d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::StickyButtonLogic
 --- !u!1 &1056097893
 GameObject:
   m_ObjectHideFlags: 0
@@ -5196,6 +5370,7 @@ GameObject:
   - component: {fileID: 1056097897}
   - component: {fileID: 1056097896}
   - component: {fileID: 1056097895}
+  - component: {fileID: 1056097898}
   m_Layer: 5
   m_Name: stapleButton
   m_TagString: Untagged
@@ -5305,6 +5480,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1056097893}
   m_CullTransparentMesh: 1
+--- !u!114 &1056097898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1056097893}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f2b562ea263a0b47886d541a55c101d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::StickyButtonLogic
 --- !u!1 &1115783658
 GameObject:
   m_ObjectHideFlags: 0
@@ -6061,22 +6248,22 @@ RectTransform:
   m_Children:
   - {fileID: 1886416551}
   - {fileID: 395684693}
+  - {fileID: 1528041236}
   - {fileID: 1405449466}
   - {fileID: 540885617}
   - {fileID: 1871650755}
-  - {fileID: 1528041236}
+  - {fileID: 1572481009}
   - {fileID: 1325837548}
   - {fileID: 386393337}
   - {fileID: 137285233}
   - {fileID: 1279703662}
+  - {fileID: 827127415}
   - {fileID: 601690969}
   - {fileID: 967423211}
   - {fileID: 2043714995}
   - {fileID: 885160491}
   - {fileID: 94295362}
   - {fileID: 1647479252}
-  - {fileID: 1572481009}
-  - {fileID: 827127415}
   - {fileID: 2112987696}
   - {fileID: 1548461855}
   m_Father: {fileID: 0}
@@ -7010,6 +7197,7 @@ GameObject:
   - component: {fileID: 1334869369}
   - component: {fileID: 1334869368}
   - component: {fileID: 1334869367}
+  - component: {fileID: 1334869370}
   m_Layer: 5
   m_Name: UpgradesButton
   m_TagString: Untagged
@@ -7119,6 +7307,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1334869365}
   m_CullTransparentMesh: 1
+--- !u!114 &1334869370
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1334869365}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f2b562ea263a0b47886d541a55c101d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::StickyButtonLogic
 --- !u!1 &1339687401
 GameObject:
   m_ObjectHideFlags: 0
@@ -7131,6 +7331,7 @@ GameObject:
   - component: {fileID: 1339687405}
   - component: {fileID: 1339687404}
   - component: {fileID: 1339687403}
+  - component: {fileID: 1339687406}
   m_Layer: 5
   m_Name: MechanicsButton
   m_TagString: Untagged
@@ -7240,6 +7441,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1339687401}
   m_CullTransparentMesh: 1
+--- !u!114 &1339687406
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1339687401}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f2b562ea263a0b47886d541a55c101d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::StickyButtonLogic
 --- !u!1 &1379271297
 GameObject:
   m_ObjectHideFlags: 0
@@ -7632,6 +7845,68 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1406542423}
   m_CullTransparentMesh: 1
+--- !u!1 &1446430511
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1446430513}
+  - component: {fileID: 1446430512}
+  m_Layer: 0
+  m_Name: StickyAlmanacManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1446430512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1446430511}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dd9a542bde86264a9d5d0587f77be0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::StickyAlmanacManager
+  topBackground: {fileID: 395684692}
+  LoreBackground: {fileID: 1528041235}
+  MechanicsBackground: {fileID: 1572481008}
+  UpgradesBackground: {fileID: 827127414}
+  CompanyLoreBackground: {fileID: 1405449465}
+  YouLoreBackground: {fileID: 540885616}
+  kpiLoreBackground: {fileID: 1871650754}
+  clickingMechanicsBackground: {fileID: 1325837547}
+  moraleMechanicsBackground: {fileID: 386393336}
+  reputationMechanicsBackground: {fileID: 137285232}
+  mailingMechanicsBackground: {fileID: 1279703661}
+  calendarPadding: {fileID: 601690968}
+  emailSignature: {fileID: 967423210}
+  stapleStorm3000: {fileID: 2043714994}
+  emailAttachments: {fileID: 885160490}
+  ergonomicMouse: {fileID: 94295361}
+  emailBot: {fileID: 1647479251}
+  AchievementsBackground: {fileID: 2112987695}
+--- !u!4 &1446430513
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1446430511}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 852.1609, y: 509.0025, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1446830115
 GameObject:
   m_ObjectHideFlags: 0
@@ -8717,6 +8992,7 @@ GameObject:
   - component: {fileID: 1607733746}
   - component: {fileID: 1607733745}
   - component: {fileID: 1607733744}
+  - component: {fileID: 1607733747}
   m_Layer: 5
   m_Name: LoreButton
   m_TagString: Untagged
@@ -8787,7 +9063,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1607733745}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 788708608}
+        m_TargetAssemblyTypeName: StickyButtonLogic, Assembly-CSharp
+        m_MethodName: OnButtonClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1607733745
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8826,6 +9114,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1607733742}
   m_CullTransparentMesh: 1
+--- !u!114 &1607733747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1607733742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f2b562ea263a0b47886d541a55c101d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::StickyButtonLogic
 --- !u!1 &1623439545
 GameObject:
   m_ObjectHideFlags: 0
@@ -9291,6 +9591,7 @@ GameObject:
   - component: {fileID: 1704450059}
   - component: {fileID: 1704450058}
   - component: {fileID: 1704450057}
+  - component: {fileID: 1704450060}
   m_Layer: 5
   m_Name: ergonomicbutton
   m_TagString: Untagged
@@ -9400,6 +9701,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1704450055}
   m_CullTransparentMesh: 1
+--- !u!114 &1704450060
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1704450055}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f2b562ea263a0b47886d541a55c101d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::StickyButtonLogic
 --- !u!1 &1721194800
 GameObject:
   m_ObjectHideFlags: 0
@@ -10302,6 +10615,7 @@ GameObject:
   - component: {fileID: 1813527026}
   - component: {fileID: 1813527025}
   - component: {fileID: 1813527024}
+  - component: {fileID: 1813527027}
   m_Layer: 5
   m_Name: AchievementsButton
   m_TagString: Untagged
@@ -10411,6 +10725,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1813527022}
   m_CullTransparentMesh: 1
+--- !u!114 &1813527027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1813527022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f2b562ea263a0b47886d541a55c101d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::StickyButtonLogic
 --- !u!1 &1822383271
 GameObject:
   m_ObjectHideFlags: 0
@@ -10602,6 +10928,7 @@ GameObject:
   - component: {fileID: 1876581513}
   - component: {fileID: 1876581512}
   - component: {fileID: 1876581511}
+  - component: {fileID: 1876581514}
   m_Layer: 5
   m_Name: youButton
   m_TagString: Untagged
@@ -10711,6 +11038,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1876581509}
   m_CullTransparentMesh: 1
+--- !u!114 &1876581514
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1876581509}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f2b562ea263a0b47886d541a55c101d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::StickyButtonLogic
 --- !u!1 &1886416550
 GameObject:
   m_ObjectHideFlags: 0
@@ -11846,4 +12185,6 @@ SceneRoots:
   - {fileID: 959232262}
   - {fileID: 561515895}
   - {fileID: 1212039619}
+  - {fileID: 1446430513}
   - {fileID: 878019494}
+  - {fileID: 788708609}

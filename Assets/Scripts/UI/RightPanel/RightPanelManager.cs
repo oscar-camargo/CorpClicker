@@ -1,10 +1,14 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class RightPanelToggle : MonoBehaviour
 {
     [SerializeField] private GameObject dashboardPanel;
     [SerializeField] private GameObject outlookPanel;
     [SerializeField] private GameObject promoteButton;
+
+    [Header("Scene Management")]
+    [SerializeField] private string stickySceneName = "StickyCodex";
 
     private void Start()
     {
@@ -24,5 +28,10 @@ public class RightPanelToggle : MonoBehaviour
     {
         dashboardPanel.SetActive(false);
         outlookPanel.SetActive(true);
+    }
+
+    public void openSticky()
+    {
+        SceneManager.LoadScene(stickySceneName);
     }
 }

@@ -7,11 +7,22 @@ public class StickyButtonLogic : MonoBehaviour
     {
         if (StickyAlmanacManager.Instance != null)
         {
-            StickyAlmanacManager.Instance.selectMenu(gameObject);
+            Debug.Log(gameObject.name);
+            StickyAlmanacManager.Instance.SelectMenu(gameObject);
         }
         else
         {
             Debug.LogError("AlmanacManager instance not found!");
         }
+    }
+
+    public void closeSticky()
+    {
+        StickyAlmanacManager.Instance.ReturnToGame();
+    }
+
+    public void openSticky()
+    {
+        StickyAlmanacManager.Instance.ReturnToGame();
     }
 }

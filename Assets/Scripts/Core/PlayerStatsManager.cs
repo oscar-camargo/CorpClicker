@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening; // you installed DOTween
 using System;
+using TMPro;
 using Clicker.Core;
 
 namespace Clicker.PlayerStats
@@ -15,6 +16,8 @@ namespace Clicker.PlayerStats
         [SerializeField] private Image moraleFill;      // set Image.type=Filled, FillMethod=Horizontal
         [SerializeField] private Image reputationFill;  // set Image.type=Filled, FillMethod=Horizontal
         [SerializeField] private float barTween = 0.25f; // 0 = instant
+        [SerializeField] private TextMeshProUGUI moraleCounter;
+        [SerializeField] private TextMeshProUGUI repCounter;
 
         [Header("Stats 0..100")]
         [Range(0,100)] public int morale = 50;
@@ -35,9 +38,21 @@ namespace Clicker.PlayerStats
         public int autoCapMax = 500;    // L_max
         [Range(0.5f, 8f)] public float expK = 4f; // k (steepness)
 
+        [Header("Decay - Morale")]
+        [SerializeField] private int   moraleDecayAmount   = 1;
+        [SerializeField] private float moraleDecayInterval = 30f;
+        [SerializeField] private int   moraleFloor         = 50;
+
+        [Header("Decay - Reputation (idle-based)")]
+        [SerializeField] private float repIdleThreshold    = 180f; // 3 minutes
+        [SerializeField] private int   repDecayAmount      = 1;
+        [SerializeField] private float repDecayInterval    = 60f;  // 1 per minute
+        [SerializeField] private int   repFloor            = 30;
+
         // Events if other systems want to react
         public event Action<int> OnMoraleChanged;
         public event Action<int> OnReputationChanged;
+        private float lastMailAnsweredTime;
 
         private void Awake()
         {
@@ -45,7 +60,13 @@ namespace Clicker.PlayerStats
             Instance = this;
         }
 
-        private void Start() => RefreshUI(instant:true);
+        private void Start()
+        {
+            RefreshUI(instant: true);
+            lastMailAnsweredTime = Time.time;
+            StartCoroutine(MoraleDecayLoop());
+            StartCoroutine(ReputationDecayLoop());
+        }
 
         // --- Public API (used by mail responses, etc.) ---
         public void AddMorale(int delta)      => SetMorale(morale + delta);
@@ -116,12 +137,14 @@ namespace Clicker.PlayerStats
             {
                 if (instant || barTween <= 0f) moraleFill.fillAmount = m;
                 else moraleFill.DOFillAmount(m, barTween).SetUpdate(true);
+                moraleCounter.text = $"{morale}/100";
             }
 
             if (reputationFill)
             {
                 if (instant || barTween <= 0f) reputationFill.fillAmount = r;
                 else reputationFill.DOFillAmount(r, barTween).SetUpdate(true);
+                repCounter.text = $"{reputation}/100";
             }
         }
 
@@ -135,6 +158,42 @@ namespace Clicker.PlayerStats
                 return levelThresholds[idx];
 
             return 100;
+        }
+
+        public void NotifyMailAnswered()
+        {
+            lastMailAnsweredTime = Time.time;
+        }
+
+        private System.Collections.IEnumerator MoraleDecayLoop()
+        {
+            while (true)
+            {
+                yield return new WaitForSeconds(moraleDecayInterval);
+                if (morale > moraleFloor)
+                    SetMorale(Mathf.Max(moraleFloor, morale - moraleDecayAmount));
+            }
+        }
+
+        private System.Collections.IEnumerator ReputationDecayLoop()
+        {
+            while (true)
+            {
+                // Wait until we hit the idle threshold since last answered mail
+                float wait = repIdleThreshold - (Time.time - lastMailAnsweredTime);
+                if (wait > 0f) yield return new WaitForSeconds(wait);
+
+                // Once past threshold, decay every interval until user answers a mail
+                while (Time.time - lastMailAnsweredTime >= repIdleThreshold)
+                {
+                    if (reputation > repFloor)
+                        SetReputation(Mathf.Max(repFloor, reputation - repDecayAmount));
+
+                    yield return new WaitForSeconds(repDecayInterval);
+                }
+
+                yield return null; // re-evaluate
+            }
         }
     }
 }

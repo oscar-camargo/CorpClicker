@@ -48,6 +48,7 @@ public class MailEntryUI : MonoBehaviour
         {
             stats.AddMorale(response.moraleModifier);
             stats.AddReputation(response.reputationModifier);
+            stats.NotifyMailAnswered();
         }
 
         mailManager.MarkMailAsHandled(mail); // hides the queue button + updates no-mail text

@@ -96,11 +96,12 @@ public class MailManager : MonoBehaviour
                 mailBySlot.Remove(currentOpenSlot);
             }
 
-            // close mail view
+           // close mail view
             foreach (Transform child in mailDisplayArea) Destroy(child.gameObject);
             currentOpenSlot = null;
             UpdateNoMailText();
             noMailObject.SetActive(true);
+
         }
     }
 

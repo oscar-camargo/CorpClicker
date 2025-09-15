@@ -89,5 +89,13 @@ namespace Clicker.Core
             float remaining = Mathf.Max(allBlockedUntil, clicksBlockedUntil) - Time.time;
             return remaining > 0f ? Mathf.CeilToInt(remaining) : 0;
         }
+
+        public void SetKPI(double current, double allTime)
+        {
+            currentKPI = current;
+            allTimeKPI = allTime;
+            OnKPIChanged?.Invoke(currentKPI);
+        }
+
     }
 }

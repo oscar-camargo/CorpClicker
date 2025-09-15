@@ -35,12 +35,24 @@ public class ResponseTooltipDisplay : MonoBehaviour
     {
         if (response == null) return;
 
-        // Morale
-        ApplyStat(moraleUpArrow, moraleDownArrow, moraleText, response.moraleModifier);
+        if (response.isChaotic)
+        {
+            // Morale
+            ApplyStat(moraleUpArrow, moraleDownArrow, moraleText, response.moraleModifier,true);
 
-        // Reputation
-        ApplyStat(repUpArrow, repDownArrow, repText, response.reputationModifier);
+            // Reputation
+            ApplyStat(repUpArrow, repDownArrow, repText, response.reputationModifier,true);
+        }
+        
+        else
+        {
+            // Morale
+            ApplyStat(moraleUpArrow, moraleDownArrow, moraleText, response.moraleModifier,false);
 
+            // Reputation
+            ApplyStat(repUpArrow, repDownArrow, repText, response.reputationModifier,false);
+        }
+            
         tooltipRoot.SetActive(true);
         PositionTooltip(anchor);
     }
@@ -50,20 +62,29 @@ public class ResponseTooltipDisplay : MonoBehaviour
         tooltipRoot.SetActive(false);
     }
 
-    private void ApplyStat(GameObject up, GameObject down, TextMeshProUGUI txt, int value)
+    private void ApplyStat(GameObject up, GameObject down, TextMeshProUGUI txt, int value, bool isChaotic)
     {
-        // Solo muestra una flecha; para 0 oculta ambas
-        bool pos = value > 0;
-        bool neg = value < 0;
-
-        if (up)   up.SetActive(pos);
-        if (down) down.SetActive(neg);
-
-        if (txt)
+        if (isChaotic)
         {
-            txt.text  = Mathf.Abs(value).ToString();        // “10”
-            txt.color = pos ? positiveColor : (neg ? negativeColor : zeroColor);
-            if (value == 0) txt.text = "0";                 // o “—” si prefieres
+            txt.text = "???";
+            txt.color = zeroColor;
+            up.SetActive(false);
+            down.SetActive(false);
+        }
+        else
+        {
+            bool pos = value > 0;
+            bool neg = value < 0;
+
+            if (up)   up.SetActive(pos);
+            if (down) down.SetActive(neg);
+
+            if (txt)
+            {
+                txt.text  = Mathf.Abs(value).ToString();
+                txt.color = pos ? positiveColor : (neg ? negativeColor : zeroColor);
+                if (value == 0) txt.text = "0";  
+            }
         }
     }
 

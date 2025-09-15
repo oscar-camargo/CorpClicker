@@ -30,6 +30,7 @@ namespace Clicker.Upgrades
         private int pushClicks = 0;          // 0..config.maxClicks
         private bool pushActive = false;
         private float pushLockUntil = 0f;
+        private float pendingPushDurationBonus = 0f;
 
         private void Awake()
         {
@@ -184,6 +185,11 @@ namespace Clicker.Upgrades
             float baseDur = cfg.baseDurationByLevel[Mathf.Clamp(lvl - 1, 0, cfg.baseDurationByLevel.Length - 1)];
             float moraleT = PlayerStatsManager.Instance ? PlayerStatsManager.Instance.Morale01 : 0.5f;
             float dur = baseDur * Mathf.Lerp(cfg.moraleDurationMultRange.x, cfg.moraleDurationMultRange.y, moraleT);
+            if (pendingPushDurationBonus > 0f)
+            {
+                dur += pendingPushDurationBonus;
+                pendingPushDurationBonus = 0f;
+            }
 
             int c = pushClicks;
             double flat = 0.0;
@@ -494,5 +500,38 @@ namespace Clicker.Upgrades
                 EnforceReputationCaps(stats.reputation);
             }
         }
+
+        public void AddNextPushDurationBonus(float seconds)
+        {
+            pendingPushDurationBonus += Mathf.Max(0f, seconds);
+        }
+
+        public IReadOnlyList<UpgradeData> GetAllUpgrades() => allUpgrades;
+
+        public void ClearAllUpgradeState()
+        {
+            foreach (var u in allUpgrades) { /* set dictionaries to 0 */ 
+                // assume you have upgradeLevels/purchaseCounts dictionaries:
+                if (upgradeLevels.ContainsKey(u)) upgradeLevels[u] = 0;
+                if (purchaseCounts.ContainsKey(u)) purchaseCounts[u] = 0;
+            }
+        }
+
+        public void ForceSetUpgradeLevel(UpgradeData u, int lvl)
+        {
+            upgradeLevels[u] = Mathf.Clamp(lvl, 0, u.maxLevel);
+        }
+
+        public void ForceSetPurchaseCount(UpgradeData u, int count)
+        {
+            purchaseCounts[u] = Mathf.Max(0, count);
+        }
+
+        public void ForceRefreshAll()
+        {
+            foreach (var kv in upgradeDisplayMap)
+                kv.Value.Refresh(GetUpgradeLevel(kv.Key));
+        }
+
     }
 }

@@ -47,7 +47,10 @@ namespace Clicker.Upgrades
         public bool requiresShift = false;
         public bool requiresCtrl  = false;
         public PushLuckConfig pushLuckConfig; // assign the SO
-        
+
+        // --- Upgrade ID for save system --- //
+        [Header("ID")]
+        [SerializeField] private string upgradeID;
 
         // ---------- API ----------
         public double GetCostAtLevel(int level, int purchases = 0)

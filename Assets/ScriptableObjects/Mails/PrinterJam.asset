@@ -28,14 +28,50 @@ MonoBehaviour:
     Intern'
   responses:
   - responseText: Sure, I'll drop by
-    moraleModifier: 0
-    reputationModifier: 10
+    moraleModifier: 6
+    reputationModifier: -4
+    isChaotic: 0
+    probCaseA: 0.45
+    probCaseB: 0.45
+    probCaseC: 0.1
+    caseA_MoraleDelta: -10
+    caseA_ReputationDelta: 15
+    caseB_MoraleDelta: 15
+    caseB_ReputationDelta: -10
+    caseC_PushDurationBonus: 10
   - responseText: Have you tried turning it off and on? lol
-    moraleModifier: 30
-    reputationModifier: -20
+    moraleModifier: 10
+    reputationModifier: -10
+    isChaotic: 0
+    probCaseA: 0.45
+    probCaseB: 0.45
+    probCaseC: 0.1
+    caseA_MoraleDelta: -10
+    caseA_ReputationDelta: 15
+    caseB_MoraleDelta: 15
+    caseB_ReputationDelta: -10
+    caseC_PushDurationBonus: 10
   - responseText: Of course, you're my most appreciated intern
-    moraleModifier: 20
-    reputationModifier: 0
+    moraleModifier: -4
+    reputationModifier: 10
+    isChaotic: 0
+    probCaseA: 0.45
+    probCaseB: 0.45
+    probCaseC: 0.1
+    caseA_MoraleDelta: -10
+    caseA_ReputationDelta: 15
+    caseB_MoraleDelta: 15
+    caseB_ReputationDelta: -10
+    caseC_PushDurationBonus: 10
   - responseText: The mythocondria is the powerhouse of the cell
     moraleModifier: 0
-    reputationModifier: -20
+    reputationModifier: 0
+    isChaotic: 1
+    probCaseA: 0.45
+    probCaseB: 0.45
+    probCaseC: 0.1
+    caseA_MoraleDelta: -10
+    caseA_ReputationDelta: 15
+    caseB_MoraleDelta: 15
+    caseB_ReputationDelta: -10
+    caseC_PushDurationBonus: 10

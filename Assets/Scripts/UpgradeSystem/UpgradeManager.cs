@@ -441,7 +441,7 @@ namespace Clicker.Upgrades
             }
         }
 
-        private void EnforceReputationCaps(int _)
+        public void EnforceReputationCaps(int _)
         {
             var stats = PlayerStatsManager.Instance;
             if (stats == null) return;

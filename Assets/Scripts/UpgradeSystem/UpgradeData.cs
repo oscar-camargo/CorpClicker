@@ -50,7 +50,7 @@ namespace Clicker.Upgrades
 
         // --- Upgrade ID for save system --- //
         [Header("ID")]
-        [SerializeField] private string upgradeID;
+        [SerializeField] public string upgradeID;
 
         // ---------- API ----------
         public double GetCostAtLevel(int level, int purchases = 0)

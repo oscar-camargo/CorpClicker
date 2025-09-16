@@ -1,6 +1,7 @@
 // SaveManager.cs
 using UnityEngine;
 using System.IO;
+using System;
 using Newtonsoft.Json;
 using System.Collections;
 
@@ -73,7 +74,7 @@ public class SaveManager : MonoBehaviour
             foreach (var u in um.GetAllUpgrades())
             {
                 s.upgrades.Add(new UpgradeState {
-                    id = u.Id,
+                    id = u.upgradeID,
                     level = um.GetUpgradeLevel(u),
                     purchases = um.GetPurchaseCount(u)
                 });
@@ -101,7 +102,7 @@ public class SaveManager : MonoBehaviour
         {
             // Map by Id
             var byId = new System.Collections.Generic.Dictionary<string, Clicker.Upgrades.UpgradeData>();
-            foreach (var u in um.GetAllUpgrades()) byId[u.Id] = u;
+            foreach (var u in um.GetAllUpgrades()) byId[u.upgradeID] = u;
 
             // Clear current state
             um.ClearAllUpgradeState(); // add this helper in UpgradeManager (sets all levels/purchases to 0 & refreshes UI)

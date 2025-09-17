@@ -10,15 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f074757e753a2574f9e45764e7609b8c, type: 3}
-  m_Name: PrinterJam
+  m_Name: TeamBuilding
   m_EditorClassIdentifier: 
-  subject: Printer catastrophe (Again)
-  content: 'The printer is jammed with a stack of onboarding forms... and a deck
-    of slides for a school project.
-
-    Somehow, it''s making weird echoing noises.'
+  subject: Bowling saturday night
+  content: HR sent a bowling night team building, you're "encouraged" to go. Otherwise,
+    expect daily teamwork trainings
   responses:
-  - responseText: I'll clear it. Send me the tray guide
+  - responseText: I'm in. Please share teams and timings
     moraleModifier: -4
     reputationModifier: 6
     isChaotic: 0
@@ -30,7 +28,8 @@ MonoBehaviour:
     caseB_MoraleDelta: 15
     caseB_ReputationDelta: -10
     caseC_PushDurationBonus: 10
-  - responseText: Have we tried "paper goes in" yet? Just a thought
+  - responseText: Can we speed-run the bonding? I already dislike everyone, no need
+      for more reasons
     moraleModifier: 10
     reputationModifier: -4
     isChaotic: 0
@@ -42,7 +41,7 @@ MonoBehaviour:
     caseB_MoraleDelta: 15
     caseB_ReputationDelta: -10
     caseC_PushDurationBonus: 10
-  - responseText: I'll personally restore print excellence for this team
+  - responseText: Thrilled to support team morale. Happy to synergize lanes
     moraleModifier: -8
     reputationModifier: 8
     isChaotic: 0
@@ -54,8 +53,7 @@ MonoBehaviour:
     caseB_MoraleDelta: 15
     caseB_ReputationDelta: -10
     caseC_PushDurationBonus: 10
-  - responseText: CCing management for "Printer Memorial Service" in the lobby. Bring
-      flowers
+  - responseText: Proposing noon outdoor laser tag instead
     moraleModifier: 0
     reputationModifier: 0
     isChaotic: 1

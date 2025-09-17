@@ -10,15 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f074757e753a2574f9e45764e7609b8c, type: 3}
-  m_Name: PrinterJam
+  m_Name: CoffeeMachine
   m_EditorClassIdentifier: 
-  subject: Printer catastrophe (Again)
-  content: 'The printer is jammed with a stack of onboarding forms... and a deck
-    of slides for a school project.
-
-    Somehow, it''s making weird echoing noises.'
+  subject: Coffee Machine Error 41
+  content: Coffee comes out tarry & cold. The machine seems not to work
   responses:
-  - responseText: I'll clear it. Send me the tray guide
+  - responseText: I'll schedule a 10-minute fix. Manual attached
     moraleModifier: -4
     reputationModifier: 6
     isChaotic: 0
@@ -30,7 +27,7 @@ MonoBehaviour:
     caseB_MoraleDelta: 15
     caseB_ReputationDelta: -10
     caseC_PushDurationBonus: 10
-  - responseText: Have we tried "paper goes in" yet? Just a thought
+  - responseText: Have we tried offering it a better job?
     moraleModifier: 10
     reputationModifier: -4
     isChaotic: 0
@@ -42,7 +39,8 @@ MonoBehaviour:
     caseB_MoraleDelta: 15
     caseB_ReputationDelta: -10
     caseC_PushDurationBonus: 10
-  - responseText: I'll personally restore print excellence for this team
+  - responseText: I'll steward our caffeine infrastructure with pride. For the sake
+      of everyone's energy
     moraleModifier: -8
     reputationModifier: 8
     isChaotic: 0
@@ -54,8 +52,7 @@ MonoBehaviour:
     caseB_MoraleDelta: 15
     caseB_ReputationDelta: -10
     caseC_PushDurationBonus: 10
-  - responseText: CCing management for "Printer Memorial Service" in the lobby. Bring
-      flowers
+  - responseText: Declaring "Cold Brew Fudge Week". Solved.
     moraleModifier: 0
     reputationModifier: 0
     isChaotic: 1

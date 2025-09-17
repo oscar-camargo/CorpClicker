@@ -10,15 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f074757e753a2574f9e45764e7609b8c, type: 3}
-  m_Name: PrinterJam
+  m_Name: DoubleMeeting
   m_EditorClassIdentifier: 
-  subject: Printer catastrophe (Again)
-  content: 'The printer is jammed with a stack of onboarding forms... and a deck
-    of slides for a school project.
-
-    Somehow, it''s making weird echoing noises.'
+  subject: Double-booked
+  content: Two meetings, same time. Which will you attend?
   responses:
-  - responseText: I'll clear it. Send me the tray guide
+  - responseText: I'll join one, send notes to the other
     moraleModifier: -4
     reputationModifier: 6
     isChaotic: 0
@@ -30,7 +27,7 @@ MonoBehaviour:
     caseB_MoraleDelta: 15
     caseB_ReputationDelta: -10
     caseC_PushDurationBonus: 10
-  - responseText: Have we tried "paper goes in" yet? Just a thought
+  - responseText: I'll split my soul and see which half performs better
     moraleModifier: 10
     reputationModifier: -4
     isChaotic: 0
@@ -42,7 +39,8 @@ MonoBehaviour:
     caseB_MoraleDelta: 15
     caseB_ReputationDelta: -10
     caseC_PushDurationBonus: 10
-  - responseText: I'll personally restore print excellence for this team
+  - responseText: I'll attend one from my computer and one from my phone, and prepare
+      recaps for both
     moraleModifier: -8
     reputationModifier: 8
     isChaotic: 0
@@ -54,8 +52,7 @@ MonoBehaviour:
     caseB_MoraleDelta: 15
     caseB_ReputationDelta: -10
     caseC_PushDurationBonus: 10
-  - responseText: CCing management for "Printer Memorial Service" in the lobby. Bring
-      flowers
+  - responseText: I'll go lock myself in the restroom. Taco Tuesday!
     moraleModifier: 0
     reputationModifier: 0
     isChaotic: 1

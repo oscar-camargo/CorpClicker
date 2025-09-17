@@ -10,15 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f074757e753a2574f9e45764e7609b8c, type: 3}
-  m_Name: PrinterJam
+  m_Name: Phishing
   m_EditorClassIdentifier: 
-  subject: Printer catastrophe (Again)
-  content: 'The printer is jammed with a stack of onboarding forms... and a deck
-    of slides for a school project.
-
-    Somehow, it''s making weird echoing noises.'
+  subject: Phishing(?) Email
+  content: You receive a suspicious email talking about "verification of payroll
+    details" along with a shortened URL.
   responses:
-  - responseText: I'll clear it. Send me the tray guide
+  - responseText: Reporting to IT. Forwarding advise to teammates.
     moraleModifier: -4
     reputationModifier: 6
     isChaotic: 0
@@ -30,7 +28,7 @@ MonoBehaviour:
     caseB_MoraleDelta: 15
     caseB_ReputationDelta: -10
     caseC_PushDurationBonus: 10
-  - responseText: Have we tried "paper goes in" yet? Just a thought
+  - responseText: Replying with my favorite fake identity
     moraleModifier: 10
     reputationModifier: -4
     isChaotic: 0
@@ -42,7 +40,8 @@ MonoBehaviour:
     caseB_MoraleDelta: 15
     caseB_ReputationDelta: -10
     caseC_PushDurationBonus: 10
-  - responseText: I'll personally restore print excellence for this team
+  - responseText: I'm telling IT, and thank them for protecting us. I'll complete
+      the phishing training
     moraleModifier: -8
     reputationModifier: 8
     isChaotic: 0
@@ -54,8 +53,7 @@ MonoBehaviour:
     caseB_MoraleDelta: 15
     caseB_ReputationDelta: -10
     caseC_PushDurationBonus: 10
-  - responseText: CCing management for "Printer Memorial Service" in the lobby. Bring
-      flowers
+  - responseText: Forwarding to everyone, titled "Opportunity?"
     moraleModifier: 0
     reputationModifier: 0
     isChaotic: 1

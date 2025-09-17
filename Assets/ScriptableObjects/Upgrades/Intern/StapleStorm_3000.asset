@@ -22,7 +22,7 @@ MonoBehaviour:
   maxLevel: 3
   effectType: 2
   costPerLevel:
-  - 10000
+  - 15000
   - 50000
   - 150000
   baseCost: 0
@@ -39,3 +39,4 @@ MonoBehaviour:
   requiresShift: 0
   requiresCtrl: 1
   pushLuckConfig: {fileID: 11400000, guid: 3f65243042923de4098624f48f18c853, type: 2}
+  upgradeID: 14

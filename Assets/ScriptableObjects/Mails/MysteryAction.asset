@@ -10,15 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f074757e753a2574f9e45764e7609b8c, type: 3}
-  m_Name: PrinterJam
+  m_Name: MysteryAction
   m_EditorClassIdentifier: 
-  subject: Printer catastrophe (Again)
-  content: 'The printer is jammed with a stack of onboarding forms... and a deck
-    of slides for a school project.
-
-    Somehow, it''s making weird echoing noises.'
+  subject: Mystery Action Item
+  content: Meeting minutes lists you as owner of "Synergy cross-functional alignment
+    deliverable TBD"
   responses:
-  - responseText: I'll clear it. Send me the tray guide
+  - responseText: Please confirm scope, due date, and criteria
     moraleModifier: -4
     reputationModifier: 6
     isChaotic: 0
@@ -30,7 +28,7 @@ MonoBehaviour:
     caseB_MoraleDelta: 15
     caseB_ReputationDelta: -10
     caseC_PushDurationBonus: 10
-  - responseText: Have we tried "paper goes in" yet? Just a thought
+  - responseText: Big fan of abstract deliverables. Does it exist yet?
     moraleModifier: 10
     reputationModifier: -4
     isChaotic: 0
@@ -42,7 +40,7 @@ MonoBehaviour:
     caseB_MoraleDelta: 15
     caseB_ReputationDelta: -10
     caseC_PushDurationBonus: 10
-  - responseText: I'll personally restore print excellence for this team
+  - responseText: Happy to own this. Awaiting experts guidance
     moraleModifier: -8
     reputationModifier: 8
     isChaotic: 0
@@ -54,8 +52,7 @@ MonoBehaviour:
     caseB_MoraleDelta: 15
     caseB_ReputationDelta: -10
     caseC_PushDurationBonus: 10
-  - responseText: CCing management for "Printer Memorial Service" in the lobby. Bring
-      flowers
+  - responseText: Marking it as "done". I'll just recycle some old slide decks
     moraleModifier: 0
     reputationModifier: 0
     isChaotic: 1

@@ -10,15 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f074757e753a2574f9e45764e7609b8c, type: 3}
-  m_Name: PrinterJam
+  m_Name: LostBadge
   m_EditorClassIdentifier: 
-  subject: Printer catastrophe (Again)
-  content: 'The printer is jammed with a stack of onboarding forms... and a deck
-    of slides for a school project.
-
-    Somehow, it''s making weird echoing noises.'
+  subject: 'Re: Lost Intern Badge'
+  content: My badge was "borrowed" and vanished. What should I do? I can't check
+    in without it!
   responses:
-  - responseText: I'll clear it. Send me the tray guide
+  - responseText: Reporting and reissuing. Just go to HR
     moraleModifier: -4
     reputationModifier: 6
     isChaotic: 0
@@ -30,7 +28,7 @@ MonoBehaviour:
     caseB_MoraleDelta: 15
     caseB_ReputationDelta: -10
     caseC_PushDurationBonus: 10
-  - responseText: Have we tried "paper goes in" yet? Just a thought
+  - responseText: If the badge returns on its own, should we hire it?
     moraleModifier: 10
     reputationModifier: -4
     isChaotic: 0
@@ -42,7 +40,7 @@ MonoBehaviour:
     caseB_MoraleDelta: 15
     caseB_ReputationDelta: -10
     caseC_PushDurationBonus: 10
-  - responseText: I'll personally restore print excellence for this team
+  - responseText: I'll follow the protocol & CC HR/Security. It's for your own good
     moraleModifier: -8
     reputationModifier: 8
     isChaotic: 0
@@ -54,8 +52,7 @@ MonoBehaviour:
     caseB_MoraleDelta: 15
     caseB_ReputationDelta: -10
     caseC_PushDurationBonus: 10
-  - responseText: CCing management for "Printer Memorial Service" in the lobby. Bring
-      flowers
+  - responseText: I'll post "Missing badge" flyers all over the office
     moraleModifier: 0
     reputationModifier: 0
     isChaotic: 1

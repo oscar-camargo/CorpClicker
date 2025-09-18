@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f074757e753a2574f9e45764e7609b8c, type: 3}
+  m_Name: VPN
+  m_EditorClassIdentifier: 
+  subject: Wellness Survey
+  content: HR forwards all employees a wellness survey. They promised it to be "anonymous".
+  responses:
+  - responseText: Completed, with suggestions. Please share outcomes
+    moraleModifier: -4
+    reputationModifier: 6
+    isChaotic: 0
+    probCaseA: 0.45
+    probCaseB: 0.45
+    probCaseC: 0.1
+    caseA_MoraleDelta: -10
+    caseA_ReputationDelta: 15
+    caseB_MoraleDelta: 15
+    caseB_ReputationDelta: -10
+    caseC_PushDurationBonus: 10
+  - responseText: I voted for "more naps, fewer forms"
+    moraleModifier: 10
+    reputationModifier: -4
+    isChaotic: 0
+    probCaseA: 0.45
+    probCaseB: 0.45
+    probCaseC: 0.1
+    caseA_MoraleDelta: -10
+    caseA_ReputationDelta: 15
+    caseB_MoraleDelta: 15
+    caseB_ReputationDelta: -10
+    caseC_PushDurationBonus: 10
+  - responseText: Appreciate the care. Happy to champion employee participation
+    moraleModifier: -8
+    reputationModifier: 8
+    isChaotic: 0
+    probCaseA: 0.45
+    probCaseB: 0.45
+    probCaseC: 0.1
+    caseA_MoraleDelta: -10
+    caseA_ReputationDelta: 15
+    caseB_MoraleDelta: 15
+    caseB_ReputationDelta: -10
+    caseC_PushDurationBonus: 10
+  - responseText: Responded using emojis only
+    moraleModifier: 0
+    reputationModifier: 0
+    isChaotic: 1
+    probCaseA: 0.45
+    probCaseB: 0.45
+    probCaseC: 0.1
+    caseA_MoraleDelta: -10
+    caseA_ReputationDelta: 15
+    caseB_MoraleDelta: 15
+    caseB_ReputationDelta: -10
+    caseC_PushDurationBonus: 10

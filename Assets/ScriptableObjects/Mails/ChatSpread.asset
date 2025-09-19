@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f074757e753a2574f9e45764e7609b8c, type: 3}
-  m_Name: VPN
+  m_Name: ChatSpread
   m_EditorClassIdentifier: 
-  subject: VPN Half Down
-  content: Seems like the company VPN's failing. Some can connect, some can't. You
-    got the short end of the stick
+  subject: Chat Sprawl
+  content: The exact same topic is being discussed in 5 different chats, 2 scheduled
+    meetings, and 1 mail chain. Your inbox is flooded
   responses:
-  - responseText: Collecting symptoms. Sending to IT with timestamps
+  - responseText: Consolidating to one channel. Weekly summary to e-mail
     moraleModifier: -4
     reputationModifier: 6
     isChaotic: 0
@@ -28,7 +28,7 @@ MonoBehaviour:
     caseB_MoraleDelta: 15
     caseB_ReputationDelta: -10
     caseC_PushDurationBonus: 10
-  - responseText: Fantastic. let's establish an "Analog Productivity hour" then
+  - responseText: I'm collecting them all. Like pets, but louder
     moraleModifier: 10
     reputationModifier: -4
     isChaotic: 0
@@ -40,7 +40,7 @@ MonoBehaviour:
     caseB_MoraleDelta: 15
     caseB_ReputationDelta: -10
     caseC_PushDurationBonus: 10
-  - responseText: Thank you, IT. Standing by with any logs you need
+  - responseText: Aligning to leadership's preferred channel. Signal, not noise
     moraleModifier: -8
     reputationModifier: 8
     isChaotic: 0
@@ -52,7 +52,7 @@ MonoBehaviour:
     caseB_MoraleDelta: 15
     caseB_ReputationDelta: -10
     caseC_PushDurationBonus: 10
-  - responseText: Pretend like you have internet connection and "work"
+  - responseText: Creating one more chat called "Discussion final FINAL FINAL"
     moraleModifier: 0
     reputationModifier: 0
     isChaotic: 1

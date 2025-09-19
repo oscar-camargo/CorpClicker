@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f074757e753a2574f9e45764e7609b8c, type: 3}
-  m_Name: VPN
+  m_Name: ProjectName
   m_EditorClassIdentifier: 
-  subject: VPN Half Down
-  content: Seems like the company VPN's failing. Some can connect, some can't. You
-    got the short end of the stick
+  subject: 'Re:Re:Re:Re: Project Name'
+  content: You were forwarded a giant mail chain debating the new project's name.
+    "Horizon", "Eagle", and "Q4 Fixes" are the best candidates
   responses:
-  - responseText: Collecting symptoms. Sending to IT with timestamps
+  - responseText: Voting "Horizon". Clear, neutral, client-friendly
     moraleModifier: -4
     reputationModifier: 6
     isChaotic: 0
@@ -28,7 +28,8 @@ MonoBehaviour:
     caseB_MoraleDelta: 15
     caseB_ReputationDelta: -10
     caseC_PushDurationBonus: 10
-  - responseText: Fantastic. let's establish an "Analog Productivity hour" then
+  - responseText: I don't know. "Project Project" has a strong minimalist energy
+      to it
     moraleModifier: 10
     reputationModifier: -4
     isChaotic: 0
@@ -40,7 +41,7 @@ MonoBehaviour:
     caseB_MoraleDelta: 15
     caseB_ReputationDelta: -10
     caseC_PushDurationBonus: 10
-  - responseText: Thank you, IT. Standing by with any logs you need
+  - responseText: Happy to support leadership's favorite
     moraleModifier: -8
     reputationModifier: 8
     isChaotic: 0
@@ -52,7 +53,7 @@ MonoBehaviour:
     caseB_MoraleDelta: 15
     caseB_ReputationDelta: -10
     caseC_PushDurationBonus: 10
-  - responseText: Pretend like you have internet connection and "work"
+  - responseText: Naming it "Untitled Final FINAL"
     moraleModifier: 0
     reputationModifier: 0
     isChaotic: 1

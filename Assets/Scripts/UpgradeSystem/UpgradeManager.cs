@@ -32,6 +32,12 @@ namespace Clicker.Upgrades
         private float pushLockUntil = 0f;
         private float pendingPushDurationBonus = 0f;
 
+        [Header("Push-Your-Luck Decay")]
+        [SerializeField] private float pushDecayStartDelay = 8f;   // seconds idle before draining
+        [SerializeField] private float pushDecayPerSecond = 30f;  // clicks drained per second
+        private float lastPushInputTime = 0f;
+        private float pushDecayAccum = 0f;
+
         private void Awake()
         {
             if (Instance == null) Instance = this;
@@ -74,23 +80,37 @@ namespace Clicker.Upgrades
                     TryActivatePushLuck(upgrade);
             }
 
+            // Decay logic
             var pu = GetPushUpgrade();
-            if (pu != null && pu.pushLuckConfig != null &&
-                upgradeDisplayMap.TryGetValue(pu, out var ui))
+            if (pu != null && !pushActive && Time.time >= pushLockUntil && pushClicks > 0)
+            {
+                if (Time.time - lastPushInputTime >= pushDecayStartDelay)
+                {
+                    pushDecayAccum += pushDecayPerSecond * Time.deltaTime;
+                    if (pushDecayAccum >= 1f)
+                    {
+                        int drain = Mathf.FloorToInt(pushDecayAccum);
+                        pushDecayAccum -= drain;
+                        pushClicks = Mathf.Max(0, pushClicks - drain);
+                    }
+                }
+            }
+
+            // Update bar
+            if (pu != null && pu.pushLuckConfig != null && upgradeDisplayMap.TryGetValue(pu, out var ui))
             {
                 float fill = Mathf.Clamp01((float)pushClicks / pu.pushLuckConfig.maxClicks);
                 ui.UpdateChargeBar(fill);
             }
-            if (!repSubscribed) EnsureRepSubscription();
         }
 
         public void OnPlayerClick()
         {
-            // Charge Push-Your-Luck on any player click
             var pu = GetPushUpgrade();
             if (pu != null && upgradeLevels[pu] > 0 && !pushActive && Time.time >= pushLockUntil && pu.pushLuckConfig != null)
             {
                 pushClicks = Mathf.Min(pu.pushLuckConfig.maxClicks, pushClicks + 1);
+                lastPushInputTime = Time.time;           // << track last input
             }
         }
 

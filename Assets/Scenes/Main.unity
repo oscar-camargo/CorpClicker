@@ -3851,8 +3851,28 @@ MonoBehaviour:
   spawnChance: 1
   maxMails: 4
   mailPool:
+  - {fileID: 11400000, guid: 3829a9a7bf6aa0b4b9eeeee089cd2a4a, type: 2}
+  - {fileID: 11400000, guid: 77aaf93d285949246943bb7b515c1431, type: 2}
+  - {fileID: 11400000, guid: d78ad7a5cd00ede49b0bdb5b7f96b07b, type: 2}
+  - {fileID: 11400000, guid: 39d7b417f9269664a95fc7f443ad662e, type: 2}
+  - {fileID: 11400000, guid: 08bf0f6152e70e141aff188fcd980329, type: 2}
+  - {fileID: 11400000, guid: b0f03d0a3baa091429d57c267e84af43, type: 2}
+  - {fileID: 11400000, guid: b9c0ce93e5c0be148af2f55b46b5ebad, type: 2}
+  - {fileID: 11400000, guid: 919224b2d6609204faadbce40f0bbeb0, type: 2}
+  - {fileID: 11400000, guid: 79f4354d64d69b2488777b51504fef65, type: 2}
+  - {fileID: 11400000, guid: b84df9346b6230049a1b3cc40dc9f091, type: 2}
+  - {fileID: 11400000, guid: fba5dc35d0a507444a409943bb36de08, type: 2}
+  - {fileID: 11400000, guid: 60a76f764ecadee4b975127c9070ac74, type: 2}
+  - {fileID: 11400000, guid: 8252fa1d89863274ca4ffed1dbcf6c60, type: 2}
   - {fileID: 11400000, guid: d8f2a3428a1850a4988cd19816f5ce10, type: 2}
+  - {fileID: 11400000, guid: 25b067ce17e71d04bae882ac4654c208, type: 2}
+  - {fileID: 11400000, guid: 5354ba4a79242c7438840a9b9ca7ba37, type: 2}
   - {fileID: 11400000, guid: 0a7356bdcd01dd04a9b0b24253d69954, type: 2}
+  - {fileID: 11400000, guid: 805e56685a406444ca08b111cf9d9e5e, type: 2}
+  - {fileID: 11400000, guid: 9ddfb31283a434e48a0d67df1f3cda41, type: 2}
+  - {fileID: 11400000, guid: b8ee235df1b67874f94315b1f8a17d54, type: 2}
+  - {fileID: 11400000, guid: 60050efb02954df4a877dd3fd8d10309, type: 2}
+  - {fileID: 11400000, guid: e226bc84855684842b83798cab662c99, type: 2}
   mailSlots:
   - {fileID: 158542256}
   - {fileID: 406352856}

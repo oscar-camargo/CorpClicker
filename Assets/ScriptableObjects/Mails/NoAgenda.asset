@@ -49,7 +49,7 @@ MonoBehaviour:
     probCaseB: 0.45
     probCaseC: 0.1
     caseC_RushMultiplier: 7
-    caseC_RushDuration: 10
+    caseC_RushDuration: 20
     caseA_MoraleDelta: -10
     caseA_ReputationDelta: 15
     caseB_MoraleDelta: 15

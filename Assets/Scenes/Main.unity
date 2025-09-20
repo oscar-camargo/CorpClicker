@@ -643,11 +643,16 @@ MonoBehaviour:
   messageEntryPrefab: {fileID: 8680359555492711689, guid: 78030b827bdaeae4085f6a042034db76, type: 3}
   scrollRect: {fileID: 1283867250}
   spacerPrefab: {fileID: 4313369235950308145, guid: f2bfefc239603754baa8630875cc0dcd, type: 3}
-  ghostMessagePlaceholder: {fileID: 1014140127}
-  messageInterval: 10
-  spawnProbability: 0.8
-  maxMessages: 10
+  ghostMessagePlaceholder: {fileID: 1014140128}
+  baseSpacing: 10
+  diffFactor: 0.25
+  dynamicSpacing: 1
+  maxExtraSpacing: 16
+  heightSmoothing: 0.3
   specialColor: {r: 0.5019608, g: 0, b: 0, a: 1}
+  maxMessages: 10
+  messageInterval: 5
+  spawnProbability: 0.8
 --- !u!1 &102626777
 GameObject:
   m_ObjectHideFlags: 0
@@ -4316,11 +4321,11 @@ MonoBehaviour:
     m_Top: 30
     m_Bottom: 30
   m_ChildAlignment: 0
-  m_Spacing: 30
+  m_Spacing: 0
   m_ChildForceExpandWidth: 0
-  m_ChildForceExpandHeight: 1
-  m_ChildControlWidth: 0
-  m_ChildControlHeight: 0
+  m_ChildForceExpandHeight: 0
+  m_ChildControlWidth: 1
+  m_ChildControlHeight: 1
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0

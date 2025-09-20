@@ -3,16 +3,44 @@
   "WorkspaceRootPath": "C:\\Users\\Oscar\\Documents\\GitHub\\CorpClicker\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Oscar\\Documents\\GitHub\\CorpClicker\\Assets\\Scripts\\Core\\GameState.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Core\\GameState.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Oscar\\Documents\\GitHub\\CorpClicker\\Assets\\Scripts\\UpgradeSystem\\UpgradeManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\UpgradeSystem\\UpgradeManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Oscar\\Documents\\GitHub\\CorpClicker\\Assets\\Scripts\\MessageSystem\\MailSystem\\MailSlot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\MessageSystem\\MailSystem\\MailSlot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Oscar\\Documents\\GitHub\\CorpClicker\\Assets\\Scripts\\Core\\Save\\SaveManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Core\\Save\\SaveManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Oscar\\Documents\\GitHub\\CorpClicker\\Assets\\Scripts\\Sticky\\StickyAssistant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Sticky\\StickyAssistant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Oscar\\Documents\\GitHub\\CorpClicker\\Assets\\Scripts\\Sticky\\StickyAlmanacManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Sticky\\StickyAlmanacManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Oscar\\Documents\\GitHub\\CorpClicker\\Assets\\Scripts\\UI\\RightPanel\\RightPanelManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\UI\\RightPanel\\RightPanelManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Oscar\\Documents\\GitHub\\CorpClicker\\Assets\\Scripts\\Core\\PlayerStatsManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Core\\PlayerStatsManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Oscar\\Documents\\GitHub\\CorpClicker\\Assets\\Scripts\\MessageSystem\\MailSystem\\MailResponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\MessageSystem\\MailSystem\\MailResponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Oscar\\Documents\\GitHub\\CorpClicker\\Assets\\Scripts\\MessageSystem\\MailSystem\\MailEntryUI.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\MessageSystem\\MailSystem\\MailEntryUI.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Oscar\\Documents\\GitHub\\CorpClicker\\Assets\\Scripts\\MessageSystem\\MailSystem\\MailSlot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\MessageSystem\\MailSystem\\MailSlot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Oscar\\Documents\\GitHub\\CorpClicker\\Assets\\Scripts\\UpgradeSystem\\UpgradeData.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -26,43 +54,134 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 6,
+              "Title": "PlayerStatsManager.cs",
+              "DocumentMoniker": "C:\\Users\\Oscar\\Documents\\GitHub\\CorpClicker\\Assets\\Scripts\\Core\\PlayerStatsManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Core\\PlayerStatsManager.cs",
+              "ToolTip": "C:\\Users\\Oscar\\Documents\\GitHub\\CorpClicker\\Assets\\Scripts\\Core\\PlayerStatsManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Core\\PlayerStatsManager.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAADwAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-20T19:11:10.385Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "RightPanelManager.cs",
+              "DocumentMoniker": "C:\\Users\\Oscar\\Documents\\GitHub\\CorpClicker\\Assets\\Scripts\\UI\\RightPanel\\RightPanelManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\RightPanel\\RightPanelManager.cs",
+              "ToolTip": "C:\\Users\\Oscar\\Documents\\GitHub\\CorpClicker\\Assets\\Scripts\\UI\\RightPanel\\RightPanelManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\UI\\RightPanel\\RightPanelManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-20T19:09:35.851Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "StickyAlmanacManager.cs",
+              "DocumentMoniker": "C:\\Users\\Oscar\\Documents\\GitHub\\CorpClicker\\Assets\\Scripts\\Sticky\\StickyAlmanacManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Sticky\\StickyAlmanacManager.cs",
+              "ToolTip": "C:\\Users\\Oscar\\Documents\\GitHub\\CorpClicker\\Assets\\Scripts\\Sticky\\StickyAlmanacManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Sticky\\StickyAlmanacManager.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAAACkAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-20T19:08:54.993Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "StickyAssistant.cs",
+              "DocumentMoniker": "C:\\Users\\Oscar\\Documents\\GitHub\\CorpClicker\\Assets\\Scripts\\Sticky\\StickyAssistant.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Sticky\\StickyAssistant.cs",
+              "ToolTip": "C:\\Users\\Oscar\\Documents\\GitHub\\CorpClicker\\Assets\\Scripts\\Sticky\\StickyAssistant.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Sticky\\StickyAssistant.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-20T18:10:30.711Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "MailEntryUI.cs",
+              "DocumentMoniker": "C:\\Users\\Oscar\\Documents\\GitHub\\CorpClicker\\Assets\\Scripts\\MessageSystem\\MailSystem\\MailEntryUI.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\MessageSystem\\MailSystem\\MailEntryUI.cs",
+              "ToolTip": "C:\\Users\\Oscar\\Documents\\GitHub\\CorpClicker\\Assets\\Scripts\\MessageSystem\\MailSystem\\MailEntryUI.cs",
+              "RelativeToolTip": "Assets\\Scripts\\MessageSystem\\MailSystem\\MailEntryUI.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEYAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-20T17:24:58.815Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "MailResponse.cs",
+              "DocumentMoniker": "C:\\Users\\Oscar\\Documents\\GitHub\\CorpClicker\\Assets\\Scripts\\MessageSystem\\MailSystem\\MailResponse.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\MessageSystem\\MailSystem\\MailResponse.cs",
+              "ToolTip": "C:\\Users\\Oscar\\Documents\\GitHub\\CorpClicker\\Assets\\Scripts\\MessageSystem\\MailSystem\\MailResponse.cs",
+              "RelativeToolTip": "Assets\\Scripts\\MessageSystem\\MailSystem\\MailResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-20T17:18:21.617Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "GameState.cs",
+              "DocumentMoniker": "C:\\Users\\Oscar\\Documents\\GitHub\\CorpClicker\\Assets\\Scripts\\Core\\GameState.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Core\\GameState.cs",
+              "ToolTip": "C:\\Users\\Oscar\\Documents\\GitHub\\CorpClicker\\Assets\\Scripts\\Core\\GameState.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Core\\GameState.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAACkAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-20T17:20:37.623Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "MailSlot.cs",
               "DocumentMoniker": "C:\\Users\\Oscar\\Documents\\GitHub\\CorpClicker\\Assets\\Scripts\\MessageSystem\\MailSystem\\MailSlot.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\MessageSystem\\MailSystem\\MailSlot.cs",
               "ToolTip": "C:\\Users\\Oscar\\Documents\\GitHub\\CorpClicker\\Assets\\Scripts\\MessageSystem\\MailSystem\\MailSlot.cs",
               "RelativeToolTip": "Assets\\Scripts\\MessageSystem\\MailSystem\\MailSlot.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABMAAAAxAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-16T19:39:48.143Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "UpgradeManager.cs",
               "DocumentMoniker": "C:\\Users\\Oscar\\Documents\\GitHub\\CorpClicker\\Assets\\Scripts\\UpgradeSystem\\UpgradeManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\UpgradeSystem\\UpgradeManager.cs",
               "ToolTip": "C:\\Users\\Oscar\\Documents\\GitHub\\CorpClicker\\Assets\\Scripts\\UpgradeSystem\\UpgradeManager.cs",
               "RelativeToolTip": "Assets\\Scripts\\UpgradeSystem\\UpgradeManager.cs",
-              "ViewState": "AgIAADMAAAAAAAAAAAAjwFMAAAAmAAAAAAAAAA==",
+              "ViewState": "AgIAABwAAAAAAAAAAAAjwCwAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-16T08:43:29.467Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 10,
               "Title": "UpgradeData.cs",
               "DocumentMoniker": "C:\\Users\\Oscar\\Documents\\GitHub\\CorpClicker\\Assets\\Scripts\\UpgradeSystem\\UpgradeData.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\UpgradeSystem\\UpgradeData.cs",
               "ToolTip": "C:\\Users\\Oscar\\Documents\\GitHub\\CorpClicker\\Assets\\Scripts\\UpgradeSystem\\UpgradeData.cs",
               "RelativeToolTip": "Assets\\Scripts\\UpgradeSystem\\UpgradeData.cs",
-              "ViewState": "AgIAABcAAAAAAAAAAAAjwDQAAAAwAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADQAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-16T08:34:18.585Z",
               "EditorCaption": ""
@@ -75,7 +194,7 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\Core\\Save\\SaveManager.cs",
               "ToolTip": "C:\\Users\\Oscar\\Documents\\GitHub\\CorpClicker\\Assets\\Scripts\\Core\\Save\\SaveManager.cs",
               "RelativeToolTip": "Assets\\Scripts\\Core\\Save\\SaveManager.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABQAAAAmAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-16T08:31:01.23Z",
               "EditorCaption": ""

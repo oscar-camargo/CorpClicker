@@ -2,6 +2,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using Clicker.PlayerStats;
+using Clicker.Core;
 
 public class MailEntryUI : MonoBehaviour
 {
@@ -66,8 +67,9 @@ public class MailEntryUI : MonoBehaviour
             }
             else
             {
-                Clicker.Upgrades.UpgradeManager.Instance?.AddNextPushDurationBonus(response.caseC_PushDurationBonus);
-                MessageLogManager.Instance?.PostSpecial($"+{response.caseC_PushDurationBonus:0} s bonus to next Push-Your-Luck boost!");
+                GameState.Instance?.StartGlobalKpiRush(response.caseC_RushMultiplier, response.caseC_RushDuration);
+                MessageLogManager.Instance?.PostSpecial(
+                    $"LUCKY! {response.caseC_RushMultiplier:0.#}× KPI for {response.caseC_RushDuration:0}s!");
             }
         }
         else

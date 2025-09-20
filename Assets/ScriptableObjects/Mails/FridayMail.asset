@@ -23,11 +23,12 @@ MonoBehaviour:
     probCaseA: 0.45
     probCaseB: 0.45
     probCaseC: 0.1
+    caseC_RushMultiplier: 7
+    caseC_RushDuration: 10
     caseA_MoraleDelta: -10
     caseA_ReputationDelta: 15
     caseB_MoraleDelta: 15
     caseB_ReputationDelta: -10
-    caseC_PushDurationBonus: 10
   - responseText: Fantastic timing. I'll consult the weekend to see if customer wants
       some ice breakers
     moraleModifier: 10
@@ -36,11 +37,12 @@ MonoBehaviour:
     probCaseA: 0.45
     probCaseB: 0.45
     probCaseC: 0.1
+    caseC_RushMultiplier: 7
+    caseC_RushDuration: 10
     caseA_MoraleDelta: -10
     caseA_ReputationDelta: 15
     caseB_MoraleDelta: 15
     caseB_ReputationDelta: -10
-    caseC_PushDurationBonus: 10
   - responseText: I can jump on now if that best supports the mission
     moraleModifier: -8
     reputationModifier: 8
@@ -48,20 +50,22 @@ MonoBehaviour:
     probCaseA: 0.45
     probCaseB: 0.45
     probCaseC: 0.1
+    caseC_RushMultiplier: 7
+    caseC_RushDuration: 10
     caseA_MoraleDelta: -10
     caseA_ReputationDelta: 15
     caseB_MoraleDelta: 15
     caseB_ReputationDelta: -10
-    caseC_PushDurationBonus: 10
   - responseText: Out-of-office activated. "Respectfully, see you Monday"
     moraleModifier: 0
     reputationModifier: 0
     isChaotic: 1
-    probCaseA: 0.45
-    probCaseB: 0.45
-    probCaseC: 0.1
+    probCaseA: 0.275
+    probCaseB: 0.275
+    probCaseC: 0.45
+    caseC_RushMultiplier: 7
+    caseC_RushDuration: 10
     caseA_MoraleDelta: -10
     caseA_ReputationDelta: 15
     caseB_MoraleDelta: 15
     caseB_ReputationDelta: -10
-    caseC_PushDurationBonus: 10

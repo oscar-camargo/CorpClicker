@@ -25,11 +25,12 @@ MonoBehaviour:
     probCaseA: 0.45
     probCaseB: 0.45
     probCaseC: 0.1
+    caseC_RushMultiplier: 7
+    caseC_RushDuration: 10
     caseA_MoraleDelta: -10
     caseA_ReputationDelta: 15
     caseB_MoraleDelta: 15
     caseB_ReputationDelta: -10
-    caseC_PushDurationBonus: 10
   - responseText: Have we tried "paper goes in" yet? Just a thought
     moraleModifier: 10
     reputationModifier: -4
@@ -37,11 +38,12 @@ MonoBehaviour:
     probCaseA: 0.45
     probCaseB: 0.45
     probCaseC: 0.1
+    caseC_RushMultiplier: 7
+    caseC_RushDuration: 10
     caseA_MoraleDelta: -10
     caseA_ReputationDelta: 15
     caseB_MoraleDelta: 15
     caseB_ReputationDelta: -10
-    caseC_PushDurationBonus: 10
   - responseText: I'll personally restore print excellence for this team
     moraleModifier: -8
     reputationModifier: 8
@@ -49,21 +51,23 @@ MonoBehaviour:
     probCaseA: 0.45
     probCaseB: 0.45
     probCaseC: 0.1
+    caseC_RushMultiplier: 7
+    caseC_RushDuration: 10
     caseA_MoraleDelta: -10
     caseA_ReputationDelta: 15
     caseB_MoraleDelta: 15
     caseB_ReputationDelta: -10
-    caseC_PushDurationBonus: 10
   - responseText: CCing management for "Printer Memorial Service" in the lobby. Bring
       flowers
     moraleModifier: 0
     reputationModifier: 0
     isChaotic: 1
-    probCaseA: 0.45
-    probCaseB: 0.45
-    probCaseC: 0.1
+    probCaseA: 0.275
+    probCaseB: 0.275
+    probCaseC: 0.45
+    caseC_RushMultiplier: 7
+    caseC_RushDuration: 10
     caseA_MoraleDelta: -10
     caseA_ReputationDelta: 15
     caseB_MoraleDelta: 15
     caseB_ReputationDelta: -10
-    caseC_PushDurationBonus: 10

@@ -23,11 +23,12 @@ MonoBehaviour:
     probCaseA: 0.45
     probCaseB: 0.45
     probCaseC: 0.1
+    caseC_RushMultiplier: 7
+    caseC_RushDuration: 10
     caseA_MoraleDelta: -10
     caseA_ReputationDelta: 15
     caseB_MoraleDelta: 15
     caseB_ReputationDelta: -10
-    caseC_PushDurationBonus: 10
   - responseText: If the badge returns on its own, should we hire it?
     moraleModifier: 10
     reputationModifier: -4
@@ -35,11 +36,12 @@ MonoBehaviour:
     probCaseA: 0.45
     probCaseB: 0.45
     probCaseC: 0.1
+    caseC_RushMultiplier: 7
+    caseC_RushDuration: 10
     caseA_MoraleDelta: -10
     caseA_ReputationDelta: 15
     caseB_MoraleDelta: 15
     caseB_ReputationDelta: -10
-    caseC_PushDurationBonus: 10
   - responseText: I'll follow the protocol & CC HR/Security. It's for your own good
     moraleModifier: -8
     reputationModifier: 8
@@ -47,20 +49,22 @@ MonoBehaviour:
     probCaseA: 0.45
     probCaseB: 0.45
     probCaseC: 0.1
+    caseC_RushMultiplier: 7
+    caseC_RushDuration: 10
     caseA_MoraleDelta: -10
     caseA_ReputationDelta: 15
     caseB_MoraleDelta: 15
     caseB_ReputationDelta: -10
-    caseC_PushDurationBonus: 10
   - responseText: I'll post "Missing badge" flyers all over the office
     moraleModifier: 0
     reputationModifier: 0
     isChaotic: 1
-    probCaseA: 0.45
-    probCaseB: 0.45
-    probCaseC: 0.1
+    probCaseA: 0.275
+    probCaseB: 0.275
+    probCaseC: 0.45
+    caseC_RushMultiplier: 7
+    caseC_RushDuration: 10
     caseA_MoraleDelta: -10
     caseA_ReputationDelta: 15
     caseB_MoraleDelta: 15
     caseB_ReputationDelta: -10
-    caseC_PushDurationBonus: 10

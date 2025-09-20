@@ -213,7 +213,9 @@ public class StickyAlmanacManager : MonoBehaviour
 
     public void ReturnToGame()
     {
-        SceneManager.LoadScene(gameSceneName);
+        Time.timeScale = 1f;
+        var codexScene = gameObject.scene;
+        UnityEngine.SceneManagement.SceneManager.UnloadSceneAsync(codexScene);
     }
 
 

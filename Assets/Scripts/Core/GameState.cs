@@ -1,5 +1,6 @@
 using UnityEngine;
 using System;
+using System.Collections;
 using Clicker.PlayerStats;
 
 namespace Clicker.Core
@@ -13,6 +14,9 @@ namespace Clicker.Core
         public double TemporaryKpiMultiplier { get; set; } = 1.0;
 
         private double allTimeKPI = 0; //Keeps track of KPI produced so far since game started
+
+        public double GlobalKpiMultiplier { get; private set; } = 1.0;
+        Coroutine rushCo;
 
         public event Action<double> OnKPIChanged;
 
@@ -28,6 +32,7 @@ namespace Clicker.Core
         {
             if (Instance != null && Instance != this) { Destroy(gameObject); return; }
             Instance = this;
+            DontDestroyOnLoad(gameObject);
         }
 
         public void AddKPI(double baseAmount)
@@ -63,7 +68,7 @@ namespace Clicker.Core
             var stats = PlayerStatsManager.Instance;
             if (stats != null) moraleMult = stats.GetMoraleKpiMultiplier();
 
-            double final = (baseAmount + TempFlatKpiPerClick) * moraleMult * TemporaryKpiMultiplier;
+            double final = (baseAmount + TempFlatKpiPerClick) * moraleMult * TemporaryKpiMultiplier * GlobalKpiMultiplier;
             currentKPI += final;
             allTimeKPI += final;
             OnKPIChanged?.Invoke(currentKPI);
@@ -78,7 +83,7 @@ namespace Clicker.Core
             var stats = PlayerStatsManager.Instance;
             if (stats != null) moraleMult = stats.GetMoraleKpiMultiplier();
 
-            double final = baseAmount * moraleMult * TempAutomationMultiplier;
+            double final = baseAmount * moraleMult * TempAutomationMultiplier * GlobalKpiMultiplier;
             currentKPI += final;
             allTimeKPI += final;
             OnKPIChanged?.Invoke(currentKPI);
@@ -95,6 +100,20 @@ namespace Clicker.Core
             currentKPI = current;
             allTimeKPI = allTime;
             OnKPIChanged?.Invoke(currentKPI);
+        }
+
+        public void StartGlobalKpiRush(float mult, float duration)
+        {
+            if (rushCo != null) StopCoroutine(rushCo);
+            rushCo = StartCoroutine(RunRush(mult, duration));
+        }
+
+        private IEnumerator RunRush(float mult, float dur)
+        {
+            GlobalKpiMultiplier = mult;
+            yield return new WaitForSeconds(dur);
+            GlobalKpiMultiplier = 1.0;
+            rushCo = null;
         }
 
     }

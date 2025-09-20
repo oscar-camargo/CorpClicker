@@ -1,65 +1,58 @@
 using UnityEngine;
 using TMPro;
-using DG.Tweening;
 using System.Collections;
-using System.Collections.Generic;
+using DG.Tweening;
 
-public class StickyAssistant : MonoBehaviour
+public class StickyNudge : MonoBehaviour
 {
-    [Header("UI Elements")]
-    public CanvasGroup speechGroup;               // Controls visibility (fade in/out)
-    public TextMeshProUGUI speechText;
+    [SerializeField] private CanvasGroup bubbleRoot;
+    [SerializeField] private TextMeshProUGUI bubbleText;
+    [SerializeField] private string hint = "Click me for more info!";
+    [SerializeField] private Vector2 intervalMinutes = new Vector2(2f, 5f);
+    [SerializeField] private float showSeconds = 3f;
+    [SerializeField] private float fadeIn = 0.25f, fadeOut = 0.15f;
 
-    [Header("Timing")]
-    public float minIdleTime = 30f;               // Min seconds between random messages
-    public float maxIdleTime = 90f;               // Max seconds between random messages
-    public float messageDuration = 4f;
+    private Tween fadeT;
+    private Coroutine loopCo;
 
-    [Header("Dialogue Pool")]
-    [TextArea(2, 5)]
-    public List<string> idleLines;
-
-    private Coroutine idleRoutine;
-
-    void Start()
+    void OnEnable() { loopCo = StartCoroutine(Loop()); }
+    void OnDisable()
     {
-        StartIdleDialogueLoop();
+        if (loopCo != null) StopCoroutine(loopCo);
+        fadeT?.Kill();
+        if (bubbleRoot) { bubbleRoot.alpha = 0; bubbleRoot.gameObject.SetActive(false); }
     }
 
-    public void StartIdleDialogueLoop()
-    {
-        if (idleRoutine != null)
-            StopCoroutine(idleRoutine);
-
-        idleRoutine = StartCoroutine(RandomDialogueRoutine());
-    }
-
-    IEnumerator RandomDialogueRoutine()
+    private IEnumerator Loop()
     {
         while (true)
         {
-            float waitTime = Random.Range(minIdleTime, maxIdleTime);
-            yield return new WaitForSeconds(waitTime);
+            float wait = Random.Range(intervalMinutes.x, intervalMinutes.y) * 60f;
+            yield return new WaitForSeconds(wait);
+            if (Time.timeScale == 0f) continue; // don't nag while paused
 
-            if (idleLines.Count > 0)
-            {
-                string line = idleLines[Random.Range(0, idleLines.Count)];
-                ShowDialogue(line);
-            }
+            if (bubbleText) bubbleText.text = hint;
+            ShowBubble();
+            yield return new WaitForSeconds(showSeconds);
+            HideBubble();
         }
     }
 
-    public void ShowDialogue(string message)
+    private void ShowBubble()
     {
-        speechText.text = message;
-        speechGroup.alpha = 0;
-        speechGroup.gameObject.SetActive(true);
+        if (!bubbleRoot) return;
+        fadeT?.Kill();
+        bubbleRoot.gameObject.SetActive(true);
+        bubbleRoot.alpha = 0f;
+        fadeT = bubbleRoot.DOFade(1f, fadeIn).SetUpdate(true);
+    }
 
-        // Fade in, wait, then fade out
-        Sequence sequence = DOTween.Sequence();
-        sequence.Append(speechGroup.DOFade(1, 0.4f));
-        sequence.AppendInterval(messageDuration);
-        sequence.Append(speechGroup.DOFade(0, 0.4f));
-        sequence.OnComplete(() => speechGroup.gameObject.SetActive(false));
+    private void HideBubble()
+    {
+        if (!bubbleRoot) return;
+        fadeT?.Kill();
+        fadeT = bubbleRoot.DOFade(0f, fadeOut)
+                          .SetUpdate(true)
+                          .OnComplete(() => { if (bubbleRoot) bubbleRoot.gameObject.SetActive(false); });
     }
 }

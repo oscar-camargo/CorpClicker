@@ -19,7 +19,7 @@ MonoBehaviour:
   maxLevel: 1
   effectType: 1
   costPerLevel: []
-  baseCost: 125
+  baseCost: 100
   costGrowthFactor: 1.15
   effectPerLevel:
   - 1

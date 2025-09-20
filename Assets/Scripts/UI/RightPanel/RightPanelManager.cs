@@ -32,6 +32,7 @@ public class RightPanelToggle : MonoBehaviour
 
     public void openSticky()
     {
-        SceneManager.LoadScene(stickySceneName);
+        SceneManager.LoadScene(stickySceneName, LoadSceneMode.Additive);
+        Time.timeScale = 0f;
     }
 }
